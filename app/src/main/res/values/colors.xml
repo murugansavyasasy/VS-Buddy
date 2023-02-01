@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF926FE8</color>
+
+    <color name="purple_500">#71B2C5</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="clr_parent">#2F4C93</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="clr_principal">#902476</color>
+    <color name="clr_receiver">#0f2239</color>
+    <color name="clr_teachingstaff">#006a88</color>
+    <color name="clr_white">#FFFFFF</color>
+    <color name="clr_grey_light">#E5E5E5</color>
+    <color name="clr_black">#000000</color>
+    <color name="transparent">#80000000</color>
+    <color name="clr_light_black">#BF000000</color>
+    <color name="clr_search_blue">#CCE5F5</color>
+    <color name="clr_header_black">#222222</color>
+    <color name="clr_bgred">#FF7575</color>
+    <color name="btn_clr_green">#19c07c</color>
+    <color name="btn_clr_blue">#0084e8</color>
+    <color name="grey_screen_clr">#F4F4F3</color>
+    <color name="light_blue">#f5fbff</color>
+    <color name="stroke_grey_light">#DFDFD6</color>
+    <color name="clr_txt_grey_light">#BA918C8C</color>
+    <color name="clr_txt_red">#EC0C0C</color>
+    <color name="clr_dark_blue">#F70739F4</color>
+    <color name="clr_sky_blue">#00a7ff</color>
+    <color name="clr_emergency_red">#F66363</color>
+    <color name="clr_nb_light_blue">#97e3f6</color>
+    <color name="clr_nb_dark_blue">#2ea1ba</color>
+    <color name="clr_nb_dark_yelloe">#c38e29</color>
+    <color name="clr_nb_light_yellow">#f8d8a1</color>
+    <color name="clr_light_violet">#f0f2ff</color>
+    <color name="clr_light_pink">#faefff</color>
+    <color name="clr_text_color">#523131</color>
+    <color name="clr_play_green">#5DB097</color>
+    <color name="clr_yellow">#f3ca3a</color>
+    <color name="clr_course_green">#5daf98</color>
+    <color name="clr_bg_grey_light">#f2f2f2</color>
+    <color name="clr_bg_sentby">#B1CFFC</color>
+    <color name="clr_unselectedtab">#748dab</color>
+    <color name="clr_selectedtab">#254b7a</color>
+    <color name="clr_bg_grey">#e6eaeb</color>
+    <color name="clr_green_submit">#278731</color>
+    <color name="clr_previous_submsion">#3163f0</color>
+    <color name="clr_table_header">#c2e2ff</color>
+    <color name="clr_txt_header">#FFB65F44</color>
+
+    <color name="clr_sender_selected">#cc74bc</color>
+    <color name="clr_sender_unselected">#e6c1df</color>
+    <color name="clr_staff_unselected">#FF71B2C5</color>
+    <color name="whitegrey">#F8F7F7</color>
+    <color name="grey_rect">#ebebeb</color>
+    <color name="icon_color">#fca4e7</color>
+    <color name="clr_parent_selected">#3C61E6</color>
+    <color name="clr_parent_unselected">#99acf0</color>
+
+    <color name="clr_green">#5daf98</color>
+    <color name="clr_available">#72ad9a</color>
+
+</resources>

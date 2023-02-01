@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/changeroles"
+        android:icon="@drawable/ic_user_black"
+        android:title="Change Roles"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/faq"
+        android:title="FAQ"/>
+
+    <item
+        android:id="@+id/help"
+        android:title="Help"/>
+    <item
+        android:id="@+id/privacypolicy"
+        android:title="Privacy Policy"/>
+
+    <item
+        android:id="@+id/termsncondition"
+        android:title="Terms &amp; Conditions"/>
+
+    <item
+        android:id="@+id/changepassword"
+        android:title="Change Password"/>
+
+
+    <item
+        android:id="@+id/cache_clear"
+        android:title="Clear App Cache"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"/>
+</menu>

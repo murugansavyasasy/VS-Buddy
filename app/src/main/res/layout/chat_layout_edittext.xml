@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:background="@color/black"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgheaderBack"
+            android:layout_width="@dimen/twenty_five"
+            android:layout_height="@dimen/twenty_five"
+            android:layout_marginStart="@dimen/eight"
+            android:src="@drawable/ic_arrow_back_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgStaffPic"
+            android:layout_width="@dimen/fourty"
+            android:layout_height="@dimen/fourty"
+            android:layout_marginStart="@dimen/eight"
+            android:src="@drawable/man"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgheaderBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblSubjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/txt_title"
+            android:textColor="@color/btn_clr_blue"
+            android:textSize="@dimen/twelve"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgStaffPic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/ViewOne"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/one"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginTop="@dimen/two"
+            android:background="@color/clr_txt_grey_light"
+            app:layout_constraintLeft_toRightOf="@+id/imgStaffPic"
+            app:layout_constraintTop_toBottomOf="@+id/lblSubjectName">
+        </View>
+        <TextView
+            android:id="@+id/lblStaffName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/txt_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twelve"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/imgStaffPic"
+            app:layout_constraintTop_toBottomOf="@+id/ViewOne" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lblNoChats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifteen"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Chat is not Stated yet!"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fourteen"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/twenty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutHeader" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/fifteen"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/layoutSend"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutHeader"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_screen_clr"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/lblContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten"
+            android:layout_marginBottom="@dimen/twenty"
+            android:background="@drawable/bg_rectangle_white"
+            android:hint="Enter a message"
+            android:inputType="textMultiLine"
+            android:maxLines="15"
+            android:minLines="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/thirteen"
+            android:text=""
+            android:textColor="@color/clr_black"
+            android:textSize="@dimen/fourteen"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imgSend"
+            android:layout_width="@dimen/twenty"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:src="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

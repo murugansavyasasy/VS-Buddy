@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LayoutAdvertisement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgAdvertisement"
+                android:layout_width="406dp"
+                android:layout_height="@dimen/hundred"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgthumb"
+                android:layout_width="@dimen/fifty_five"
+                android:layout_height="@dimen/fifty_five"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/fifteen"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCorner"
+                app:strokeColor="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/LayoutHeaderImagePdf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_five"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutAdvertisement">
+
+            <ImageView
+                android:id="@+id/imgImagePdfback"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/thirty"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginEnd="@dimen/ten"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_back_white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/lblMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight"
+                android:padding="@dimen/five"
+                android:text="@string/txt_new_img_pdf"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imgImagePdfback"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/Nestedchildlayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/five"
+            app:layout_constraintBottom_toTopOf="@+id/layoutButton"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutHeaderImagePdf">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lblphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/lbl_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/thirteen"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/edImgTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten"
+                    android:background="@android:color/transparent"
+
+                    android:hint="Enter the title"
+                    android:inputType="textAutoComplete"
+                    android:paddingStart="@dimen/two"
+                    android:paddingTop="@dimen/eight"
+                    android:paddingRight="@dimen/ten"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/transparent"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintStart_toStartOf="@id/lblphone"
+                    app:layout_constraintTop_toBottomOf="@id/lblphone" />
+
+                <View
+                    android:id="@+id/viewtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/ten"
+                    android:background="@color/transparent"
+                    app:layout_constraintTop_toBottomOf="@+id/edImgTitle" />
+
+                <TextView
+                    android:id="@+id/lblImgPdfDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/lbl_description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/thirteen"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewtitle" />
+
+                <EditText
+                    android:id="@+id/txt_imgpdfdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="@dimen/ten"
+                    android:background="@drawable/bg_edittextbox_grey"
+                    android:gravity="top|left"
+                    android:hint="Enter the Description"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="@dimen/two"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingTop="@dimen/eight"
+                    android:paddingRight="@dimen/ten"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/transparent"
+                    android:textSize="@dimen/twelve"
+                    app:layout_constraintStart_toStartOf="@id/lblImgPdfDescription"
+                    app:layout_constraintTop_toBottomOf="@id/lblImgPdfDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/two"
+            android:layout_marginBottom="@dimen/twenty"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="@dimen/one_twenty"
+                android:layout_height="@dimen/fifty"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/bg_btn_grey"
+                android:gravity="center"
+                android:text="@string/txt_cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </Button>
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="@dimen/one_twenty"
+                android:layout_height="@dimen/fifty"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/bg_btn_green"
+                android:gravity="center"
+                android:padding="@dimen/two"
+                android:text="@string/txt_confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LayoutAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgAdvertisement"
+            android:layout_width="406dp"
+            android:layout_height="@dimen/hundred"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgthumb"
+            android:layout_width="@dimen/fifty_five"
+            android:layout_height="@dimen/fifty_five"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/fifteen"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCorner"
+            app:strokeColor="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LayoutHeadernotice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_five"
+        android:background="@color/clr_selectedtab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutAdvertisement">
+
+        <ImageView
+            android:id="@+id/imgLeaveback"
+            android:layout_width="@dimen/twenty_five"
+            android:layout_height="@dimen/twenty_five"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow_back_white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/lblMenuTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight"
+            android:padding="@dimen/five"
+            android:text="Apply Leave"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/thirteen"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgLeaveback"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/five"
+        android:paddingBottom="@dimen/two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutHeadernotice">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/ten">
+
+            <TextView
+                android:id="@+id/lblleave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_leave_type"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/SpinnerLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty"
+                android:background="@drawable/bg_black_white_box"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/lblleave"></Spinner>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/LayoutFromTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SpinnerLeaveType"
+                app:layout_constraintWidth_default="percent">
+                <LinearLayout
+                    android:id="@+id/lnrFromDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".5">
+                    <TextView
+                        android:id="@+id/lblsubjectco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_from"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fourteen"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/lblFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="dd/mm/yyyy"
+                        android:textColor="@color/transparent"
+                        android:textSize="@dimen/fourteen"
+                        android:enabled="false"
+                        android:editable="false"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:layout_marginTop="@dimen/ten"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lnrToDate"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/lnrFromDate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintWidth_percent=".5">
+                    <TextView
+                        android:id="@+id/lblSubjectCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten"
+                        android:textColor="@color/black"
+                        android:text="@string/txt_to"
+                        android:textSize="@dimen/thirteen"
+                        android:textStyle="normal" />
+                    <EditText
+                        android:id="@+id/lblToDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="dd/mm/yyyy"
+                        android:textColor="@color/transparent"
+                        android:textSize="@dimen/fourteen"
+                        android:enabled="false"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:layout_marginTop="@dimen/ten"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lblNumberofDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of days"
+                android:layout_marginTop="@dimen/twelve"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutFromTo"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/txtNoofDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No of days"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/thirteen"
+                android:enabled="false"
+                app:layout_goneMarginTop="@dimen/ten"
+                android:editable="false"
+                app:layout_constraintTop_toBottomOf="@+id/lblNumberofDays"
+                android:layout_marginTop="@dimen/ten"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_reason"
+                android:layout_marginTop="@dimen/twelve"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/txtNoofDays"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/txtLeaveReason"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_edittextbox_grey"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:maxLength="460"
+                android:maxLines="15"
+                android:minLines="7"
+                android:padding="@dimen/five"
+                android:text=""
+                android:textColor="@color/transparent"
+                android:textColorHint="@color/clr_grey_light"
+                android:textSize="@dimen/thirteen"
+                app:layout_constraintTop_toBottomOf="@+id/lblReason" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/twenty"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/one_twenty"
+            android:layout_height="@dimen/fifty"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:background="@drawable/bg_btn_grey"
+            android:gravity="center"
+            android:text="@string/txt_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="@dimen/one_twenty"
+            android:layout_height="@dimen/fifty"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:background="@drawable/bg_btn_green"
+            android:gravity="center"
+            android:padding="@dimen/two"
+            android:text="@string/txt_confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/man"
+        android:orderInCategory="1"
+        android:title="More"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_one"
+                android:icon="@android:drawable/ic_popup_sync"
+                android:title="Sync"/>
+            <item
+                android:id="@+id/action_two"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="About"/>
+        </menu>
+    </item>
+</menu>

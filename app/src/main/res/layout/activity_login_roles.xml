@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.LoginRoles">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Layouthead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <View
+        android:layout_width="@dimen/ninety"
+        android:layout_height="@dimen/one"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_marginTop="@dimen/eighty"
+        android:background="@color/clr_txt_grey_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </View>
+
+    <View
+        android:layout_width="@dimen/ninety"
+        android:layout_height="@dimen/one"
+        android:layout_marginEnd="@dimen/twenty"
+        android:layout_marginTop="@dimen/eighty"
+        android:background="@color/clr_txt_grey_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </View>
+    <ImageView
+        android:layout_width="@dimen/one_sixty"
+        android:layout_height="@dimen/one_sixty"
+        android:id="@+id/imglogo"
+        android:src="@drawable/gradit_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/txt_choose_your_login_type"
+        android:textStyle="bold"
+        android:textSize="@dimen/fifteen"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Layouthead"
+        android:id="@+id/lblchoosetype">
+    </TextView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twenty"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/lblchoosetype"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:indeterminateTint="@color/clr_txt_grey_light"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ryclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fifteen"
+        android:paddingBottom="@dimen/ten"
+        app:layout_constraintTop_toBottomOf="@+id/lblchoosetype"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="vertical" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:layout_height="@dimen/thirty_five"
+        android:textColor="@color/clr_sky_blue"
+        android:text="@string/txt_logout"
+        android:textStyle="bold"
+        android:textSize="@dimen/fifteen"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_logout_blue"
+        app:layout_constraintTop_toBottomOf="@id/ryclerview"
+        android:layout_marginTop="@dimen/eighty"
+        android:layout_marginRight="@dimen/twenty_five"
+        android:layout_marginLeft="@dimen/twenty_five"
+        android:id="@+id/btnLogout"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

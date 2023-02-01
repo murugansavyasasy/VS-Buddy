@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/twelve"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/twenty_three"
+            android:layout_height="@dimen/twenty_three"
+            android:layout_marginStart="@dimen/five"
+            android:layout_marginEnd="@dimen/two"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblMenuHeaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fourteen"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/viewline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one"
+        android:layout_marginLeft="@dimen/five"
+        android:background="@color/black"
+        android:textSize="@dimen/twelve"
+        android:visibility="visible"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutHeader" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_marginBottom="@dimen/one"
+        android:background="@color/clr_white"
+        app:layout_constraintBottom_toTopOf="@+id/btnTermsAndCondition"
+        app:layout_constraintTop_toBottomOf="@+id/viewline">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ten">
+
+        </WebView>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTermsAndCondition"
+        android:layout_width="406dp"
+        android:layout_height="43dp"
+        android:background="@drawable/bg_btn_blue"
+        android:padding="@dimen/seven"
+        android:text="@string/txt_accept_terms_and_condition"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fourteen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

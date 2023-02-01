@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "565722863794",
+    "firebase_url": "https://voicemessengercollege.firebaseio.com",
+    "project_id": "voicemessengercollege",
+    "storage_bucket": "voicemessengercollege.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565722863794:android:148501ed7cf45917a551ab",
+        "android_client_info": {
+          "package_name": "com.vsca.vsnapvoicecollege"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565722863794-54an1hjt2p1jlfbvrm230relnvnjf83n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj7T7lj7TGGRIbJ_a5HXWXOCQSUAFABDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565722863794-54an1hjt2p1jlfbvrm230relnvnjf83n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

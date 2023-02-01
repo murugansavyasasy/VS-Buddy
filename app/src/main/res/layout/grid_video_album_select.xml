@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view_album_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_fourty"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/frame_layout_album_select"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_hunderd"
+            android:background="#80000000"
+            android:paddingLeft="1dp"
+            android:paddingTop="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="1dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/eight"
+                android:layout_marginRight="@dimen/eight"
+                android:layout_marginBottom="@dimen/ten"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view_album_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="#000"
+                    android:shadowRadius="7.0"
+                    android:text="This is some"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/gallery_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="#000"
+                    android:shadowRadius="7.0"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/fourteen" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/thirty"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/video_icon_white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

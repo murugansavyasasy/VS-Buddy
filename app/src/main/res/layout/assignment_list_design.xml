@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fifteen"
+    android:layout_marginTop="@dimen/ten"
+    android:layout_marginEnd="@dimen/fifteen">
+
+    <LinearLayout
+        android:id="@+id/lnrNoticeboardd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/two"
+        android:background="@drawable/bg_shadow_white"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblNewCircle"
+            android:layout_width="@dimen/twelve"
+            android:layout_height="@dimen/twelve"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_read_status"
+            android:elevation="@dimen/two"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rytRecentNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/three">
+
+            <View
+                android:id="@+id/Viewlineone"
+                android:layout_width="@dimen/two"
+                android:layout_height="@dimen/fifteen"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginTop="@dimen/five"
+                android:background="@color/clr_dark_blue"></View>
+
+            <LinearLayout
+                android:id="@+id/lnrAboveAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNoticeboardTitle"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/bg_circular_attachment"
+                android:orientation="horizontal"
+                android:padding="@dimen/three"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgAttachment1"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/eight"
+                    android:src="@drawable/ic_attachment" />
+
+                <TextView
+                    android:id="@+id/lblAboveCircularPath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/five"
+                    android:layout_marginEnd="@dimen/two"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/txt_attachment"
+                    android:textColor="@color/clr_header_black"
+                    android:textSize="@dimen/twelve"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblNoticeboardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five"
+                android:layout_marginTop="@dimen/two"
+                android:layout_marginEnd="@dimen/twenty"
+                android:layout_toLeftOf="@+id/lblNoticeboardDate"
+                android:layout_toRightOf="@id/Viewlineone"
+                android:padding="@dimen/two"
+                android:text="Emeregency"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirteen"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgArrowdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNoticetime"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/eight"
+                android:layout_marginRight="@dimen/twelve"
+                android:src="@drawable/ic_arrow_down_blue" />
+
+            <TextView
+                android:id="@+id/lblNoticeboardDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/ten"
+                android:gravity="right"
+                android:padding="@dimen/three"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/lblNoticetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNoticeboardDate"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/twelve"
+                android:gravity="right"
+                android:text="time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twelve"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rytNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/three"
+            android:layout_marginBottom="@dimen/ten"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/lnrsentbyDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/lnrRecentPostedby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/five"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblNoticeboardDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/three"
+                        android:layout_marginStart="@dimen/ten"
+                        android:text="fdddddddd"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/twelve"
+                        android:textStyle="normal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       >
+
+                        <TextView
+                            android:id="@+id/lblSentBy1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ten"
+                            android:layout_marginTop="@dimen/ten"
+                            android:text="Sent by : "
+                            android:textColor="@color/clr_black"
+                            android:textSize="@dimen/twelve"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/lblNoticePostedby"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/five"
+                            android:layout_marginTop="@dimen/ten"
+                            android:layout_toRightOf="@+id/lblSentBy1"
+                            android:text="Sentby"
+                            android:textColor="@color/clr_emergency_red"
+                            android:textSize="@dimen/twelve"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/lblNoticePostedby"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="@dimen/ten"-->
+                    <!--                        android:layout_marginTop="@dimen/ten"-->
+                    <!--                        android:background="@drawable/bg_rectangle_white"-->
+                    <!--                        android:backgroundTint="@color/clr_bg_sentby"-->
+                    <!--                        android:padding="@dimen/five"-->
+                    <!--                        android:text="Sample Prnicipal"-->
+                    <!--                        android:textColor="@color/black"-->
+                    <!--                        android:textSize="@dimen/twelve" />-->
+                    <RelativeLayout
+                        android:id="@+id/rytAssignmentFiles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/lnrAttachment"
+                            android:layout_width="@dimen/one_sixty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ten"
+                            android:layout_marginTop="@dimen/ten"
+                            android:background="@drawable/bg_circular_attachment"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/three"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imgAttachment"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/eight"
+                                android:src="@drawable/ic_attachment" />
+
+                            <TextView
+                                android:id="@+id/lblAssignmentPath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/five"
+                                android:layout_marginEnd="@dimen/two"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="@string/txt_attachment"
+                                android:textColor="@color/clr_light_black"
+                                android:textSize="@dimen/twelve"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/lblFileCount"
+                            android:layout_width="@dimen/twenty"
+                            android:layout_height="@dimen/twenty"
+                            android:layout_marginStart="@dimen/five"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_toRightOf="@+id/lnrAttachment"
+                            android:background="@drawable/bg_circle_grey"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textAlignment="center"
+                            android:textColor="@color/clr_header_black"
+                            android:textSize="@dimen/eight"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrSubmission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/eight"
+                    android:layout_marginEnd="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblsubmission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten"
+                        android:text="Submission on"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/twelve"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblSubmitedOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten"
+                        android:layout_marginTop="@dimen/two"
+                        android:background="@drawable/bg_rectangle_white"
+                        android:backgroundTint="@color/clr_bg_grey"
+                        android:padding="@dimen/five"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twelve"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutSubmissions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrsentbyDescription"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblPreviousSubmission"
+                    android:layout_width="@dimen/ninety"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten"
+                    android:layout_marginTop="@dimen/three"
+                    android:background="@drawable/bg_previous_submission"
+                    android:padding="@dimen/seven"
+                    android:text="@string/txt_prev_submission"
+                    android:textAlignment="center"
+                    android:textColor="@color/clr_previous_submsion"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/lblAssingmentSubmit"
+                    android:layout_width="@dimen/sixty"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten"
+                    android:layout_marginTop="@dimen/three"
+                    android:background="@drawable/bg_submit_outer_green"
+                    android:padding="@dimen/seven"
+                    android:text="@string/txt_submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/clr_green_submit"
+                    android:textSize="@dimen/twelve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrsentbyDescription"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/ten"
+                android:background="@drawable/bg_previous_submission"
+                android:padding="@dimen/eight"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgForward"
+                    android:layout_width="@dimen/fifteen"
+                    android:layout_height="@dimen/fifteen"
+                    android:layout_gravity="center"
+                    android:src="@drawable/forward_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

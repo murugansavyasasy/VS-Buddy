@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/clr_table_header"
+        android:shape="rectangle" />
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/clr_parent" />
+    <corners android:radius="0dp" />
+</shape>

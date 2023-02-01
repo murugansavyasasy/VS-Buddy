@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/idTVCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/thirteen"
+            android:layout_marginTop="@dimen/ten"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/thirteen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblViewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            android:layout_marginEnd="@dimen/fifteen"
+            android:background="@drawable/bg_rectangle_white"
+            android:backgroundTint="@color/clr_grey_light"
+            android:gravity="end"
+            android:padding="@dimen/five"
+            android:text="@string/txt_view_all"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/lblNoRecords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/thirteen"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginTop="@dimen/fifteen"
+            android:text="No data found"
+            android:layout_below="@+id/lblViewAll"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve"
+            android:textStyle="normal" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idCVCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblViewAll"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:layout_marginTop="@dimen/eight"
+            android:visibility="visible"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDashboardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

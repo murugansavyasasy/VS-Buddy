@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rytOverAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/twenty"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_shadow_white"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:id="@+id/rytUserDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/seven"
+            android:layout_marginEnd="@dimen/eight"
+            android:layout_toLeftOf="@+id/rytRole">
+
+            <TextView
+                android:id="@+id/lblMemberName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="App principal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twelve"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblNotificationContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblMemberName"
+                android:layout_marginLeft="@dimen/five"
+                android:text=""
+                android:layout_marginTop="@dimen/five"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/twelve"
+                android:textStyle="normal" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rytRole"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/three"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/lblDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/three"
+                    android:maxLines="1"
+                    android:text="22/10/1997"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/lblNoticeficationTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="1.33pm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ten"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

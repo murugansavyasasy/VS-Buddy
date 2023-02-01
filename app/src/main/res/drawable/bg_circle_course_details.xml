@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Larger blue circle in back -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/>
+            <size
+                android:width="40dp"
+                android:height="40dp"/>
+
+            <padding
+                android:bottom="120dp"
+                android:left="120dp"
+                android:right="120dp"
+                android:top="120dp" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/course_details"
+
+        />
+
+</layer-list>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+    <FrameLayout
+        android:id="@+id/frameLayoutVideo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two_hunderd"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/three"
+            android:background="@color/clr_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/imgthumb"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/ten"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/gradit_logo"
+                app:shapeAppearanceOverlay="@style/roundedCorner">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <VideoView
+                android:id="@+id/videoview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/imgplay"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/thirty"
+                android:src="@drawable/ic_play_white"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
