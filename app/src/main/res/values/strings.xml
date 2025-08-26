@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">SSS Buddy</string>
+    <string name="app_menu">VoicensapSchoolsDemo Menu</string>
+    <string name="app_demo">VoicensapSchools Demo</string>
+    <string name="app_poc">VoicensapSchoolsDemo POC</string>
+    <string name="app_demolist">VoicensapSchools Demo List</string>
+    <string name="app_editdemo">VoicensapSchools Demo Update</string>
+    <string name="app_Schoollist">School List</string>
+    <string name="app_Fulllist">School Detailed List</string>
+    <string name="app_message">Message</string>
+    <string name="version_id">6.9</string>
+    <string name="hint_Username">Employee ID / Mobile Number</string>
+    <string name="Username">Username</string>
+    <string name="hint_Password">Password</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_clear">Clear</string>
+    <string name="hint_rememberme">Remember Me</string>
+    <string name="hint_lateupdate"><font fgcolor='#ff0000'>*</font>Reason of late update</string>
+
+    <string name="hint_schoolname"><font fgcolor='#ff0000'>*</font>School Name</string>
+    <string name="hint_Principalno"><font fgcolor='#ff0000'>*</font>Demo Principal Number</string>
+    <string name="hint_schoolname1">School Name</string>
+    <string name="hint_Principalemail">Demo Principal e-MailId</string>
+    <string name="hint_Principalno1">Principal No</string>
+    <string name="hint_Parentno1">Parent Count</string>
+    <string name="hint_Parentno"><font fgcolor='#ff0000'>*</font>Demo Parent Number</string>
+    <string name="hint_submit">Submit</string>
+
+    <string name="hint_nameschool1"><font fgcolor='#ff0000'>*</font>Name of the School(Enter full name with area)</string>
+    <string name="hint_nameschool"><font fgcolor='#ff0000'>*</font>Name of the School</string>
+    <string name="hint_schooladdr"> School Address</string>
+    <string name="hint_schoolphno"><font fgcolor='#ff0000'>*</font>School PhoneNumber</string>
+    <string name="hint_schoolmailid">School e-MailId</string>
+    <string name="hint_principalname"><font fgcolor='#ff0000' /> Name of the Person</string>
+    <string name="hint_Specific"><font fgcolor='#ff0000'>*</font> Specify</string>
+
+    <string name="hint_mobileno"><font fgcolor='#ff0000'>*</font>Mobile number to be configured in Management</string>
+    <string name="hint_Pocstartdate"><font fgcolor='#ff0000'>*</font>POC From Date</string>
+    <string name="hint_Pocdatadate"><font fgcolor='#ff0000'>*</font>Data Recevied Date</string>
+
+    <string name="hint_Postartdate"><font fgcolor='#ff0000'>*</font>PO From Date</string>
+    <string name="hint_PoTodate"><font fgcolor='#ff0000'>*</font>PO To Date</string>
+    <string name="hint_Billdate"><font fgcolor='#ff0000'>*</font>Bill Starting Date</string>
+    <string name="hint_Pocstopdate"><font fgcolor='#ff0000'>*</font>POC To Date</string>
+    <string name="hint_pocmodule"><font fgcolor='#ff0000'>*</font>POC Module</string>
+    <string name="hint_livemodule"><font fgcolor='#ff0000'>*</font>Live Module</string>
+    <string name="hint_pomodule"><font fgcolor='#ff0000'>*</font>PO Module</string>
+    <string name="hint_dbrequired"><font fgcolor='#ff0000'>*</font>Database for the required class will be given on?</string>
+    <string name="hint_scope"><font fgcolor='#ff0000'>*</font>Is the School aware of the scope of services?</string>
+    <string name="hint_demo"><font fgcolor='#ff0000'>*</font>Has the demo to be given?</string>
+    <string name="hint_remarks">Any Other Specific Remarks?</string>
+    <string name="hint_yes">Yes</string>
+    <string name="hint_no">No</string>
+    <string name="hint_mail">Mail</string>
+    <string name="hint_copy">Hard Copy</string>
+    <string name="hint_princimod">Principal Module</string>
+    <string name="hint_teachermod">Teacher Module</string>
+    <string name="hint_sms"><font fgcolor='#ff0000'>*</font>Number of SMS</string>
+    <string name="hint_call"><font fgcolor='#ff0000'>*</font>Number of Call</string>
+
+    <string name="hint_smsmod">SMS</string>
+    <string name="hint_callmod">Calls</string>
+    <string name="hint_bothmod">Both SMS and Calls</string>
+    <string name="hint_confirmalert">You
+        are going to send message on behalf of school."\n"Press Yes to confirm</string>
+
+
+    <string name="hint_schoolnamelist">Schhol Name</string>
+    <string name="hint_Usernameschool">Username</string>
+    <string name="hint_ContactNum">Contact No</string>
+    <string name="hint_schooldidlist">DID</string>
+    <string name="hint_schoolEmail">Email</string>
+    <string name="hint_schoolstatus">Status</string>
+    <string name="hint_schoolstudentlist">Student List</string>
+
+    <string name="hint_oldPassword">Existing Password</string>
+    <string name="hint_NewPassword">New Password</string>
+    <string name="hint_confirmPassword">Confirm Password</string>
+    <string name="hint_btnsubmit">Submit</string>
+
+
+    <string name="hint_revenuetarget"><font fgcolor='#ff0000'>*</font>Revenue Target</string>
+    <string name="hint_schoolachieved"><font fgcolor='#ff0000'>*</font>School Achieved</string>
+    <string name="hint_revenueacheive"><font fgcolor='#ff0000'>*</font>Revenues Achieved</string>
+    <string name="hint_pocschool"><font fgcolor='#ff0000'>*</font>POC schools</string>
+    <string name="hint_pocstudcount"><font fgcolor='#ff0000'>*</font>POC students count</string>
+    <string name="hint_pendingpayment"><font fgcolor='#ff0000'>*</font>Pending payment:</string>
+    <string name="hint_remarksifany">Remarks, if any</string>
+    <string name="hint_complaintsifany">Complaints, if any</string>
+    <string name="hint_dailystatusreport">Status Report</string>
+    <string name="hint_todayvisit">Today\'s Visit</string>
+    <string name="hint_overallstatusreport">Overall Status Repot</string>
+    <string name="hint_addnewschool">ADD NEW SCHOOL</string>
+    <string name="createdemo">Create Demo</string>
+    <string name="hint_clearall">Clear All Values</string>
+    <string name="hint_schoolpincode">Pincode</string>
+    <string name="hint_schoolcity"><font fgcolor='#ff0000'>*</font>City</string>
+    <string name="hint_contactperson">Contact Person</string>
+    <string name="hint_app">App</string>
+    <string name="erp">ERP</string>
+    <string name="voice">Voice</string>
+    <string name="sms">SMS</string>
+    <string name="hint_smscaption">SMS Caption</string>
+    <string name="txt_start_record">Press the button to <b>RECORD</b></string>
+    <string name="txt_stop_record">Press the button to <b>STOP RECORD</b></string>
+    <string name="txt_PreviewVoice">Listen your voice</string>
+    <string name="hint_area"><font fgcolor='#ff0000'>*</font>Area</string>
+    <string name="District"><font fgcolor='#ff0000'>*</font>District</string>
+
+    <string name="hint_update">Update</string>
+    <string name="hint_purchasetype">Purchase Type</string>
+    <string name="poc">POC</string>
+    <string name="live">LIVE</string>
+    <string name="schoolname">School Name</string>
+    <string name="invoices">Invoices</string>
+    <string name="amount">Amount Recieved</string>
+    <string name="amountdate">Amount Recieved Date</string>
+    <string name="mode">Mode of Payment</string>
+    <string name="financialyr">Financial year</string>
+    <string name="chequeno">Cheque number</string>
+    <string name="chequedate">Cheque Date</string>
+    <string name="depositedon">Cash Deposited On</string>
+    <string name="cash_depositedbank">Cash deposited bank</string>
+    <string name="neft_transaction">NEFT Transaction number</string>
+    <string name="pdc">Cheque no</string>
+    <string name="pdcdate">Cheque Date</string>
+    <string name="pdcbank">Cheque Bank</string>
+    <string name="Imagetosend">Image to send</string>
+    <string name="txt_chgimg">Change Image</string>
+    <string name="click">Click here to select the image</string>
+    <string name="chequedeposit">Cheque deposited date</string>
+    <string name="chequebank">Cheque bank</string>
+    <string name="chequedepositbank">Cheque Deposited Bank</string>
+    <string name="cash_depositedbankbrainch">Cash Deposited bank branch</string>
+    <string name="chequedepositbankbranch">Cheque Deposited Bank Branch</string>
+    <string name="recievedon">Cash Received on</string>
+    <string name="chequebranch">Cheque Bank Branch</string>
+
+    <string name="universal_DID"><font fgcolor='#ff0000'>*</font>Universal DID</string>
+    <string name="GroupofSchool">Group of Schools</string>
+    <string name="SingleSchool">Single School</string>
+    <string name="schoolType"><font fgcolor='#ff0000'>*</font>School Type</string>
+
+
+    <string-array name="planets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+        <item>Pluto</item>
+    </string-array>
+
+    <string name="hint_livetopdate"><font fgcolor='#ff0000'>*</font>Live To Date</string>
+    <string name="hint_livestartdate"><font fgcolor='#ff0000'>*</font>Live From Date</string>
+    <string name="usageyear">Usage year from 2017 to 2018</string>
+    <string name="usageyearspin">Usage Year</string>
+
+    <string name="teacher_txt_typemsg">Subject:</string>
+
+    <string-array name="customertype">
+        <item>Select customer</item>
+        <item>Education</item>
+        <item>Huddle</item>
+        <item>Corporate</item>
+    </string-array>
+
+    <string-array name="monthclaim">
+        <item>Months</item>
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+
+</resources>
