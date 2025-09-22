@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_myschool_list"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Activity.Usagecount">
+    <LinearLayout
+        android:id="@+id/linear_usageyear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_usage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:text="@string/usageyearspin"
+            android:textColor="@color/textbg"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spin_usage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/spinner_drawable"
+            android:padding="5dp" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="From"
+                android:layout_centerVertical="true"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_toRightOf="@+id/from"
+                android:id="@+id/FromDate"
+                style="@style/txt_black_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/ic_arrow_down_grey"
+                android:gravity="center_vertical"
+                android:padding="7dp"
+                android:text="26 Jan 2017" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/To"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="To"
+                android:layout_centerVertical="true"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_toRightOf="@+id/To"
+                android:id="@+id/ToDate"
+                style="@style/txt_black_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:clickable="true"
+                android:drawablePadding="7dp"
+                android:drawableRight="@drawable/ic_arrow_down_grey"
+                android:gravity="center_vertical"
+                android:padding="7dp"
+                android:text="26 Jan 2017" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/GetUsageCount"
+            android:layout_width="wrap_content"
+            android:text="Get Usage"
+            android:layout_gravity="center"
+            android:textColor="@color/bpWhite"
+            android:background="@color/background1"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/usage_textyear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_usageyear"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="18dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/usage_textyear"
+        android:id="@+id/rvUsagecount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background2"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tv_bg"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/POCid_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/POClistschoolname_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:textSize="14sp"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="POC by"
+                    android:textSize="15dp"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/POCby_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="City"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/POCcity_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Date"
+                    android:textSize="15dp"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/POCfromdate_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/POCprinciname_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/POCphno_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/POCemailid_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/POCmobno_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/POCmodule_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/POCtodate_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/POCcallcredits_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/POCsmscredits_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/POCdbrequried_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/POCdemo_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/POCscope_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/POCremarks_support"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/background1"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

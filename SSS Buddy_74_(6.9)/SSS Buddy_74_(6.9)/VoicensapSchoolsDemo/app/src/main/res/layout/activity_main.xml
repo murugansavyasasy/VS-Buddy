@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/bgwhite"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/choice_grid"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_margin="2dp"
+                android:layout_centerHorizontal="true"
+                android:animateLayoutChanges="true"
+                android:padding="6dp"
+                grid:alignmentMode="alignBounds"
+                grid:columnCount="3"
+                grid:rowOrderPreserved="false"
+                grid:useDefaultMargins="true">
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="1">
+
+
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:clickable="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:padding="10dp"-->
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:clickable="true"-->
+                    <!--grid:layout_gravity="fill_horizontal"-->
+                    <!--grid:layout_rowWeight="1"-->
+                    <!--grid:layout_columnWeight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/schoolcreate" />
+                    <!--android:tint="@color/disable_red" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Create demo"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="1">
+
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/demolist" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Demo List"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay3"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/createpoc" />
+                    <!--android:tint="@color/disable_red" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Create POC/Live "
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay4"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/demolist" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="School list"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay6"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/circularlist" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Circularlist"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay7"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/statusreport" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Status Report"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay_collect"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/collection" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Record Collection"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay10"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/settings_image" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Important info"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay9"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/verify" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Support Verify"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_lay5"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/approve" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Approve POC"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_CustomerDetail"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:src="@drawable/customer_details" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Customer Deatils"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_Localconvey"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/localconveyance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Local Conveyance"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_AdvanceTour"
+                    android:layout_width="10dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_rowWeight="2.9">
+
+
+                <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tour" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Advance Tour Expense"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/gridHome_invoice"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/invoice" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Invoice Verification"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridHome_pending_pay"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pending_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Pending Payments"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/gridHome_TourSettle"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/toursettle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Tour Settlement"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/gridHome_targetsale"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/target_sales_1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Target Vs Sales"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/gridHome_Director_approve"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/background3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    grid:layout_columnWeight="1.3"
+                    grid:layout_gravity="fill_horizontal"
+                    grid:layout_rowWeight="2.9">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/director_approval" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Director Approval"
+                        android:textColor="@color/textbg"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

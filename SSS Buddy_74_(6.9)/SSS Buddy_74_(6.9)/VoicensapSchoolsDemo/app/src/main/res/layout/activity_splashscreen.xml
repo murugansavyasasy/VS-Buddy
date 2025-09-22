@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splashscreen"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundsplash"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.Splashscreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="SSS"
+        android:textColor="@color/clr_black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Buddy"
+        android:textColor="@color/clr_black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher_school" />
+
+    <TextView
+        android:id="@+id/lblVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="@string/version_id"
+        android:textColor="@color/clr_black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>

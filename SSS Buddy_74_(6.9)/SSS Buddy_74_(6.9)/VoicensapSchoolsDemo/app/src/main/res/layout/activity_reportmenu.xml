@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tv_report_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Report Page"
+        android:textColor="@color/colorblack"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_report_details"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/spin_bg"
+        android:spinnerMode="dropdown" />
+
+    <LinearLayout
+        android:id="@+id/no_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_no_data"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="No Data"
+            android:src="@drawable/no_data_found" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No trips available"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_report_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/report_rectangle"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+</LinearLayout>

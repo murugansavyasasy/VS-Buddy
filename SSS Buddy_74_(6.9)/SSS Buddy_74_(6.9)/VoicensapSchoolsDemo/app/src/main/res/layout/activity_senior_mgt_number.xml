@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.Senior_mgt_number">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@color/clr_grey"
+        >
+    <TextView
+        android:id="@+id/snrmgt_schoolname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/background1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/snrl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:background="@color/clr_grey"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/snrmgt_schoolid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:textColor="@color/background1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/snrmgt_schoolname1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:textColor="@color/background1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSeniormgtno"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/snrl1"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
+</LinearLayout>

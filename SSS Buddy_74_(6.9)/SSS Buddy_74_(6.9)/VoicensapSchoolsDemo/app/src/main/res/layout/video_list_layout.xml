@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/report_rectangle"
+        android:padding="6dp">
+
+        <LinearLayout
+            android:id="@+id/VideoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toLeftOf="@+id/videoLayout"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Video Name"
+                android:textColor="@color/colorMaroon"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/videoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgthumb"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:alpha="0.8"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCorner"
+                app:srcCompat="@drawable/video_dummy_icon"
+                app:strokeWidth="5dp">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <ImageView
+                android:id="@+id/imgplay"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/white_pause"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorblack">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="General Info"
+                            android:textColor="@color/colorWhite"
+
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="5dp">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.3"-->
+                    <!--android:gravity="left"-->
+                    <!--android:text="Employee Name"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="250dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/editbox"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<Spinner-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0.7"-->
+                    <!--android:gravity="left" />-->
+                    <!--</LinearLayout>-->
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Tour Name"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="0.12"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:padding="5dp"
+                            android:id="@+id/tourname"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/lnr"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_gravity="center"
+                            android:text="Month Of Claim"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_weight="0.07"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:background="@drawable/edittext_box"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Qty"
+                                android:id="@+id/monthofclaim"
+                                android:textSize="10pt">
+
+                            </TextView>
+
+
+                            <Spinner
+                                android:layout_width="40dp"
+                                android:id="@+id/spinner"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_gravity="center"
+                                android:gravity="left">
+
+                            </Spinner>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Description"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_weight="0.12"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/description"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Purpose of Tour"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.02"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/purposeoftour"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="left"
+                            android:text="Start Date"
+                            android:id="@+id/start"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.09"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:id="@+id/img_startdate"
+                            android:src="@drawable/calendar"
+                            android:clickable="true"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="right"
+                            android:text="End Date"
+                            android:padding="2dp"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:id="@+id/img_enddate"
+                            android:src="@drawable/calendar"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:textSize="16dp"
+                            android:id="@+id/startdate"
+                            android:padding="5dp"
+                            android:focusable="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="center" />
+                        <!--<TextView-->
+                        <!--android:id="@+id/startdate"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_gravity="left"-->
+                        <!--android:layout_marginRight="30dp"-->
+                        <!--android:layout_weight="0.8"-->
+                        <!--android:text=""-->
+                        <!--android:backgroundTint="@color/colorWhite"-->
+                        <!--android:textSize="16dp"-->
+                        <!--android:background="@drawable/edittext_box"-->
+                        <!--android:focusable="true"-->
+                        <!--android:gravity="center"-->
+                        <!--android:padding="5dp" />-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:textSize="16dp"
+                            android:id="@+id/enddate"
+                            android:padding="5dp"
+                            android:layout_margin="5dp"
+                            android:focusable="true"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text="Places"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.1"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:textColor="@color/colordarkRed"/>
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/place1"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:layout_marginLeft="70dp"
+
+                            android:src="@drawable/arr_updown" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/place2"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:layout_marginLeft="70dp"
+                            android:src="@drawable/arr_updown" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:id="@+id/place3"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorblack">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Tour Summary WithBill"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Boarding &amp; Lodging"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/boarding"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:hint="0"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Buisness Promotion"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:id="@+id/buisness"
+                            android:hint="0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Conveyance &amp; Travel"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/conveyance"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Food &amp; Bevarages"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/food"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Petrol &amp; Fuel"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/petrol"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Postage &amp; Courier"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/postage"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text="Printing &amp; Stationery"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/printing"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Travel Expenses"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/travel"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Miscelleneous Expenses"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/misc"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Remarks"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:padding="5dp"
+                            android:id="@+id/remarks"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorblack">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Tour Summary WithOutBill"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Boarding &amp; Lodging"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:id="@+id/boarding1"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:hint="0"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Buisness Promotion"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:id="@+id/buisness1"
+                            android:hint="0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Conveyance &amp; Travel"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/conveyance1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Food &amp; Bevarages"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/food1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Petrol &amp; Fuel"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/petrol1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Postage &amp; Courier"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/postage1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text="Printing &amp; Stationery"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/printing1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Travel Expenses"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/travel1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Miscelleneous Expenses"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:hint="0"
+                            android:id="@+id/misc1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="left"
+                            android:text="Remarks"
+                            android:textSize="16dp"
+                            android:padding="2dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="20dp"
+                            android:padding="5dp"
+                            android:id="@+id/remarks1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edittext_box"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="left"
+                    android:textColor="@color/clr_green"
+                    android:text="Total Tour Expense"
+                    android:textSize="20dp"
+                    android:padding="2dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="20dp"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/total"
+                    android:textColor="@color/clr_green"
+                    android:focusable="false"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/edittext_box"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/spinner_box"
+                android:backgroundTint="@color/colorTheme"
+                android:gravity="center"
+                android:text="submit"
+                android:id="@+id/btn_submit"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_height="wrap_content">-->
+            <!---->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rytSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et_bg">
+
+            <EditText
+                android:id="@+id/txtSearchName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rectanglebox"
+                android:hint="Search name here"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/search" />
+
+        </RelativeLayout>
+
+
+        <ExpandableListView
+            android:id="@+id/rvExp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+
+            android:childDivider="@color/bpWhite"
+            android:divider="@color/bpblack"
+            android:groupIndicator="@null"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rytNoRecords"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Records Found"
+                android:textColor="@color/clr_grey"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

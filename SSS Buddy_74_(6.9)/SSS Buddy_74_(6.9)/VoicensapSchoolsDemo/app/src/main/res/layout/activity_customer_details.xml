@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/layout_salescustomer">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:layout_gravity="left"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/salesperson1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales Person"
+                android:textColor="@color/bgwhite"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:id="@+id/spin_layout"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/salesperson1"
+                android:background="@drawable/rectanglebox">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spin_salesperson"
+                    android:layout_width="220dp"
+                    android:focusable="false"
+                    android:layout_height="wrap_content"
+                    app:hintText="SalesPerson" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btn_search_custom"
+            android:layout_width="80dp"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/edittext_box"
+            android:text="search" />
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:padding="2dp">-->
+
+        <!--<Button-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:id="@+id/btn_search_custom"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:background="@drawable/edittext_box"-->
+            <!--android:text="search" />-->
+        <!--</RelativeLayout>-->
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorBackground"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Type"
+                android:textColor="@color/bpWhite"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectanglebox"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spin_customertype"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+               <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:text="" />
+            <!--<TextView-->
+            <!--android:id="@+id/txt_count2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="18dp"-->
+            <!--android:layout_toRightOf="@+id/txt_count"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:layout_marginTop="13dp"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:text="" />-->
+        </RelativeLayout>
+
+         </LinearLayout>
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="550dp"
+        android:layout_height="2dp"
+        android:background="@color/bpWhite" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout_id"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/txtgone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text=""-->
+            <!--android:textColor="@color/colorblue"-->
+            <!--android:textSize="25dp"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/custom_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_margin="2dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bpWhite">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

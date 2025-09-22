@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_marginTop="3dp"
+        android:text="Local Conveyance Expense"
+        android:textColor="@color/colorlightred"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:src="@drawable/search"/>-->
+
+    <EditText
+        android:id="@+id/ed_Search"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rectanglebox"
+        android:hint=" Search..."
+        android:padding="5dp" />
+    <TextView
+        android:id="@+id/txtgone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="No Records Found"
+        android:visibility="gone"
+        android:textColor="@color/colorblue"
+        android:textSize="25dp"
+         />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/colorWhite"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_plus"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/add_icon" />
+
+
+
+</RelativeLayout>

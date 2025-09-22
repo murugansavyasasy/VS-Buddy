@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.Recordcollection">
+
+    <ScrollView
+        android:id="@+id/scroll_collect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/collection_submit"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/schoolname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/schoolname"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/et_search_schoolname"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_marginLeft="10dp"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:background="@drawable/et_bg"-->
+            <!--                android:hint="Search for School name...."-->
+            <!--                android:padding="5dp"-->
+            <!--                android:visibility="gone" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:padding="5dp">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spinner_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintText="Select School" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/financialyear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/financialyr"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spin_financialyear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_drawable"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/invoices"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spin_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_drawable"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/amount"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/amt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/amountdate"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_amount_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/mode"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spin_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_drawable"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_cheque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:gravity="center"
+                    android:text="CHEQUE DETAILS"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cheque_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequeno"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cheque_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/cheque_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequedate"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTodate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_cheque_date"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/imagedate_cheque"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_cheque_date1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cheque_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequebank"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cheque_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/cheque_depositeddate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequedeposit"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cheque_depositedbankdate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_cheque_depositedbankdate"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/imagedate_cheque_depositon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/deposit_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequedepositbank"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spin_deposit_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_drawable"
+                    android:padding="5dp" />
+
+
+                <TextView
+                    android:id="@+id/cheque_depositedbankbranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequedepositbankbranch"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cheque_depositeddatebankbranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:gravity="center"
+                    android:text="CASH DETAILS"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cash_depositedon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/recievedon"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_cash_recivedon"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:inputType="text"-->
+                <!--android:layout_weight="1"-->
+                <!--android:editable="false"-->
+                <!--android:maxLength="70" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imagedate_recievedcash"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:src="@android:drawable/ic_menu_today" />-->
+                <!--</LinearLayout>-->
+                <!---->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_cash_recivedon"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/imagedate_recievedcash"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+
+                </LinearLayout>
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_cash_recivedon"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imagedate_recievedcash"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:src="@android:drawable/ic_menu_today" />-->
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/depositedon"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_cash_depositedon"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/imagedate_cash"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_cash_depositedon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cash_depositedbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cash_depositedbank"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cash_depositedbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:visibility="gone" />
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spin_cash_deposit_bank"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/spinner_drawable"-->
+                <!--android:padding="5dp" />-->
+
+
+
+                <Spinner
+                    android:id="@+id/spin_cash_deposit_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_drawable"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/cash_depositedbankbranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cash_depositedbankbrainch"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_cash_depositedbankbranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_neft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:gravity="center"
+                    android:text="NEFT DETAILS"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/neft_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/neft_transaction"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_neft_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_pdc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:gravity="center"
+                    android:text="PDC DETAILS"
+                    android:textColor="@color/background1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pdc_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/pdc"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_pdc_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/pdc_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/pdcdate"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/et_pdc_date"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/imagedate_pdc"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_pdc_date1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/pdc_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/pdcbank"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_pdc_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/pdc_bank_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/chequebranch"
+                    android:textColor="@color/textbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_pdc_bank_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/img_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/Imagetosend"
+                android:textColor="@color/textbg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background3">
+
+                <TextView
+                    android:id="@+id/lblClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/click"
+                    android:textColor="@color/background1"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/cardImage_ivImage"
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:minHeight="200dp"
+                    android:minWidth="300dp" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/cardImage_tvchangeimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_chgimg"
+                android:textColor="@color/background1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="CHANGE IMAGE" />
+        </LinearLayout>
+
+    </ScrollView>
+    <!--</LinearLayout>-->
+    <Button
+        android:id="@+id/collection_submit"
+        style="@style/Teacher_btn_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:enabled="false"
+        android:layout_marginTop="10dp"
+        android:text="@string/hint_submit"
+        android:textColor="@color/bgwhite" />
+
+</RelativeLayout>

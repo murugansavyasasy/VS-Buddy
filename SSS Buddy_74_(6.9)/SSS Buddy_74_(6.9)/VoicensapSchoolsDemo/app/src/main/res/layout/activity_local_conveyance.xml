@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/layout_MonthClaim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="1dp">
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="*"-->
+                    <!---->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor="@color/colordarkRed"/>-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Month of Claim"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox">
+
+                    <Spinner
+                        android:id="@+id/spin_Month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_ExpenseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="*"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor="@color/colordarkRed"/>-->
+
+                <TextView
+                    android:id="@+id/Expnse_Descrpt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:text="Expense Description"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/ed_ExpnseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:text=""
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorblack">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="With Bill"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_BoardLodge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/colorblack"
+                    android:text="Boarding &amp; Lodging"
+                    android:textSize="16dp"
+                    android:padding="2dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_BoradLodge"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_ConvetanceTravel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Local Conveyance"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_conveytravel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_FoodBeverages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Food and Beverages"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_food_Beverages"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_petrolFuel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Petrol"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_petrolFuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_PostageCourier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Postage and Courier"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_postageCourier"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout-printingSationary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Printing  &amp; Stationery"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_printSationary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorblack"
+                    android:text="Telephone &amp; Data Charges"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/ed_telephone1"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="Miscelleneous Expenses"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/ed_MiscellExpense"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rectanglebox"
+                    android:gravity="left" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_Remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Remarks"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_Remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_box"
+                     />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnrWithBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="With Bill total "
+                    android:textColor="@color/clr_blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblWithBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_box"
+                    android:text="0"
+                    android:textColor="@color/clr_blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:background="@color/colorblack">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Without Bill"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_BoardLodge2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/colorblack"
+                    android:text="Boarding &amp; Lodging"
+                    android:textSize="16dp"
+                    android:padding="2dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_BoradLodge2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Local Conveyance"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/ed_conveytravel2"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_FoodBeverages2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Food and Beverages"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_food_Beverages2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_petrolFuel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Petrol"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_petrolFuel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_PostageCourier2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Postage and Courier"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_postageCourier2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout-printingSationary2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/colorblack"
+                    android:text="Printing &amp; Stationery"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_printSationary2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_travelexpnse2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/colorblack"
+                    android:text="Telephone &amp;  Data Charges"
+                    android:textSize="16dp"
+                    android:padding="2dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_telephone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectanglebox"
+                    android:inputType="number|numberDecimal"
+                    android:hint="0"
+                    android:maxLength="6"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="Miscelleneous Expenses"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:hint="0"
+                    android:id="@+id/ed_MiscellExpense2"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rectanglebox"
+                    android:gravity="left" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_Remarks2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Remarks"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ed_Remarks2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_box"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrWithoutBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Without Bill total "
+                    android:textColor="@color/clr_blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblWithoutBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/clr_blue"
+                    android:background="@drawable/edittext_box"
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:background="@color/teacher_clr_black"
+                android:layout_height="1dp"></View>
+            <LinearLayout
+                android:id="@+id/layout_TotalLocal_Expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Grand Total"
+                    android:textColor="@color/clr_green"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_TotalLocal_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_box"
+                    android:text="0"
+                    android:textColor="@color/clr_green"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_button"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

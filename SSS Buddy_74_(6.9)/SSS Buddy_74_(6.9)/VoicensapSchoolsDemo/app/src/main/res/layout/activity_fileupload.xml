@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ImageUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_clickImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="Merge all the bills in one PDF/IMAGE and upload. Multiple images are not allowed"
+                android:textColor="@color/colorViolet"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/upload_img"
+                    android:layout_width="60dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/upload" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pdf_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="3dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@color/bpWhite">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/pdf_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/pdf_img1"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/pdf">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/pdf1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pdf_layou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/pdf_img2"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="3dp"
+                    android:src="@drawable/pdf"
+                    android:visibility="invisible">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/pdf2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:scaleType="fitXY"
+
+                        android:layout_weight="1">
+
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:scaleType="fitXY"
+
+                        android:layout_weight="1">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1">
+
+                        <FrameLayout
+                            android:id="@+id/click_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:scaleType="fitXY"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/text_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="35dp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_change1"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:text="Change Image/File"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:background="@color/colorTheme"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_Upload"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_button"
+                android:text="submit"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold">
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

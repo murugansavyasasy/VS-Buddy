@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:padding="12dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:drawableEnd="@drawable/arrow_down_round"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Distance: 0 km"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_visits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:nestedScrollingEnabled="false" />
+</LinearLayout>

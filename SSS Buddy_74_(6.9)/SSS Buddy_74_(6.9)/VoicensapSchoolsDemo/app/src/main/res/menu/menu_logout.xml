@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_tohome"
+        android:icon="@drawable/ic_launcher_menu"
+        android:title="logout"
+        app:showAsAction="always">
+
+        <item  android:id="@+id/changepassword"
+            android:title="ChangePassword"/>
+    <item  android:id="@+id/Logout"
+        android:title="Logout"/>
+</item>
+</menu>

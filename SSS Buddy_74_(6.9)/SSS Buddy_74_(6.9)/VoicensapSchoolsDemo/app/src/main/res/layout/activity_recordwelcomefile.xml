@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.Recordwelcomefile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/background3"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@color/bgheader"
+            android:gravity="center"
+            android:text="WELCOME FILE"
+            android:textColor="@color/background1"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/voicerecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FEEEE6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/voiceRec_tvRecTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="@string/txt_start_record"
+                        android:textColor="@color/background1"
+                        android:textSize="16sp" />
+
+
+                    <ImageView
+                        android:id="@+id/voiceRec_ivRecord"
+                        android:layout_width="@dimen/dim_rec_oval"
+                        android:layout_height="@dimen/dim_rec_oval"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_record_start"
+                        android:clickable="true"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_mic" />
+
+
+                    <TextView
+                        android:id="@+id/voiceRec_tvRecDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="00:00"
+                        android:textColor="@color/background1"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/voiceRec_rlPlayPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgwhite"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/voiceRec_tvPreviewVoiceMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="3dp"
+                    android:text="@string/txt_PreviewVoice"
+                    android:textColor="@color/background1"
+                    android:textSize="14sp" />
+
+                <include
+                    layout="@layout/my_audio_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/voiceRec_tvPreviewVoiceMsg"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!---->
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" -->
+    <!--android:text="Submit"-->
+    <!--/>-->
+
+    <Button
+        android:id="@+id/school_voicerecordsubmit"
+        style="@style/btn_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/bgwhite"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rytButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button"
+            android:text="CANCEL"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnconfirm"
+            style="@style/btn_black"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button"
+            android:enabled="false"
+            android:text="send"
+            android:textColor="@color/bgwhite"
+            android:textSize="15dp">
+
+        </Button>
+    </RelativeLayout>
+
+
+</LinearLayout>
