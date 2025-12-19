@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_create_poc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.EditPOC">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:textColor="@color/background1"
+                    android:gravity="center"
+                    android:text="GENERAL INFO"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_nameschool" />
+
+                <EditText
+                    android:id="@+id/edit_pocschoolname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"
+                    android:maxLength="70" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_schooladdr" />
+
+                <EditText
+                    android:id="@+id/edit_pocschooladdr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"
+                    android:maxLength="100" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_schoolcity" />
+
+                <EditText
+                    android:id="@+id/edit_poccity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"
+                    android:maxLength="100" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_schoolpincode" />
+
+                <EditText
+                    android:id="@+id/edit_pocpincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxLength="6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:textColor="@color/background1"
+                    android:gravity="center"
+                    android:text="CONTACT INFO"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_schoolphno" />
+
+                <EditText
+                    android:id="@+id/edit_pocschoolphno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_schoolmailid" />
+
+                <EditText
+                    android:id="@+id/edit_pocschoolmailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_contactperson" />
+
+                <EditText
+                    android:id="@+id/edit_poccontactperson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="text"
+                    android:maxLength="50" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_mobileno"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <EditText
+                        android:id="@+id/edit_textmobno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@id/add"/>
+                    <LinearLayout
+                        android:id="@+id/edit_llParentmobno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/edit_addmobno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        style="@style/btn_green"
+                        android:layout_gravity="right"
+                        android:textColor="@color/bgwhite"
+                        android:text="Add other number"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="left"-->
+            <!--android:text="@string/hint_mobileno" />-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/pocmobileno"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="10" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:textColor="@color/background1"
+                    android:gravity="center"
+                    android:text="MODULE INFO"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_purchasetype" />
+
+                <RadioGroup
+                    android:id="@+id/poc_purchasetype_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_purchasetype_poc_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:checked="true"
+                        android:text="@string/poc" />
+
+
+                    <RadioButton
+                        android:id="@+id/radio_purchasetype_live_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/live" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_Pocstartdate" />
+
+
+                <LinearLayout
+                    android:id="@+id/edit_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_pocfromdate"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/edit_imagefromdate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_Pocstopdate" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTodate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/edit_poctodate"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:maxLength="70" />
+
+                    <ImageView
+                        android:id="@+id/edit_imagetodate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_today" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hint_pocmodule" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/edit_ch_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="@string/sms" />
+
+                    <CheckBox
+                        android:id="@+id/edit_ch_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="@string/voice" />
+
+                    <CheckBox
+                        android:id="@+id/edit_ch_erp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="@string/erp"
+                        android:visibility="gone"/>
+
+                    <CheckBox
+                        android:id="@+id/edit_ch_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="@string/hint_app"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/edit_linearLayoutsmspoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                       >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:gravity="left"
+                            android:text="@string/hint_sms" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left"
+                            android:text="Is Unlimited" />
+
+                        <CheckBox
+                            android:id="@+id/edit_chsmspoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/edit_smsmodpoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/edit_linearLayoutcallpoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:gravity="left"
+                            android:text="@string/hint_call" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left"
+                            android:text="Is Unlimited" />
+
+                        <CheckBox
+                            android:id="@+id/edit_chcallpoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/edit_callmodpoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="@string/hint_smscaption" />
+
+                <EditText
+                    android:id="@+id/edit_pocschoolsmscaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="6" />
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtUniversal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/universal_DID"/>
+
+                    <CheckBox
+                        android:id="@+id/checkDID"
+                        android:layout_toRightOf="@+id/txtUniversal"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:textColor="@color/background1"
+                    android:gravity="center"
+                    android:text="WELCOME FILE"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/edit_voicerecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/clr_grey_light">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/edit_voiceRec_tvRecTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:text="@string/txt_start_record"
+                                android:textColor="@color/background1"
+                                android:textSize="16sp" />
+
+
+                            <ImageView
+                                android:id="@+id/edit_voiceRec_ivRecord"
+                                android:layout_width="@dimen/dim_rec_oval"
+                                android:layout_height="@dimen/dim_rec_oval"
+                                android:layout_gravity="center"
+                                android:padding="15dp"
+                                android:clickable="true"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/bg_record_start"
+                                android:src="@drawable/ic_mic" />
+
+
+                            <TextView
+                                android:id="@+id/edit_voiceRec_tvRecDuration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="00:00"
+                                android:layout_marginTop="12dp"
+                                android:textColor="@color/background1"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/edit_voiceRec_rlPlayPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bgwhite"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/edit_voiceRec_tvPreviewVoiceMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="3dp"
+                            android:text="@string/txt_PreviewVoice"
+                            android:textColor="@color/background1"
+                            android:textSize="14sp" />
+
+                        <include
+                            layout="@layout/my_audio_player"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/voiceRec_tvPreviewVoiceMsg"
+                            android:layout_marginTop="5dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/background3"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/bgheader"
+                    android:textColor="@color/background1"
+                    android:gravity="center"
+                    android:text="REMARKS"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_pocremarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:singleLine="false" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/edit_pocsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:text="@string/hint_update"
+                android:textColor="@color/bgwhite" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

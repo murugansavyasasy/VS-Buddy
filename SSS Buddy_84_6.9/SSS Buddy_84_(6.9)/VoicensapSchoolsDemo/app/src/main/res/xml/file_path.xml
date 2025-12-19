@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <external-path name="DemoApp_Images"-->
+<!--        path="." />-->
+<!--&lt;!&ndash;</paths>&ndash;&gt;-->
+
+<!--<paths>-->
+<!--    <external-files-path name="my_files" path="Android/data/pkg.vs.schoolsdemo.voicensapschoolsdemo/" />-->
+<!--</paths>-->
+<!--    path="Android/data/pkg.vs.schoolsdemo.voicensapschoolsdemo/"-->
+<!--<paths>-->
+<!--    <external-files-path name="my_files" path="." />-->
+<!--    <external-files-path name="download" path="Download/SchoolDocs" />-->
+<!--</paths>-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+<external-path
+    name="external_files"
+    path="." />
+</paths>
+<!--<paths>-->
+<!--    <external-files-path name="my_files" path="." />-->
+<!--    <external-path name="external_storage" path="Download/SchoolDocs" />-->
+<!--</paths>-->
+
+
+
+
+<!--<paths>-->
+<!--    <external-files-path name="excel_files" path="." />-->
+<!--</paths>-->

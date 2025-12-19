@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="TourId"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txttourid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Employee"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtemployee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Tour Date"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txttourdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Place"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Purpose"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtpurpose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:id="@+id/img_edt"-->
+                <!--android:src="@drawable/img_edt"-->
+                <!--android:background="@color/colorsilver"-->
+                <!--android:padding="2dp"-->
+                <!--android:visibility="visible"-->
+                <!--android:clickable="true"-->
+                <!--android:layout_height="30dp" />-->
+                <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:id="@+id/img_dlt"-->
+                <!--android:src="@drawable/img__bin"-->
+                <!--android:padding="2dp"-->
+                <!--android:visibility="visible"-->
+                <!--android:clickable="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toLeftOf="@+id/img_edt"-->
+                <!--android:layout_height="30dp" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Total"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Advance"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtpaid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Balance"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtbalance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.26"
+                    android:gravity="left"
+                    android:text="Status"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05"
+                    android:gravity="left"
+                    android:text=":"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtstatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left"
+
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--&gt;-->
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:textStyle="bold"-->
+            <!--android:id="@+id/approve"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_weight="0.2"-->
+            <!--android:layout_height="wrap_content" />-->
+
+
+            <!--</LinearLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_edit"
+                    android:text="edit"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="30dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:layout_margin="3dp"
+                    android:padding="2dp"
+                    android:background="@drawable/rectanglebox"
+                    android:backgroundTint="@color/colorApprove"
+
+                    android:layout_height="30dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_delete"
+                    android:text="delete"
+
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorWhite"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="3dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:background="@drawable/rectanglebox"
+                    android:backgroundTint="@color/colorlightred"
+
+
+                    android:layout_height="30dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_details"
+                    android:text="details"
+                    android:textStyle="bold"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:background="@drawable/rectanglebox"
+                    android:backgroundTint="@color/colorDetails"
+
+                    android:layout_margin="3dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="30dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/lnr1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_toLeftOf="@+id/lnrSixtyDays"
+                        android:background="@color/clr_brown"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblSixtyDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="60 days to go 0 schools"
+                            android:textColor="@color/bpWhite"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/lblSixtyDaysToview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/lnr1"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_toLeftOf="@+id/lnrSixtyDays"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:text="View Details-->"
+                        android:textColor="@color/clr_blue"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lnrSixtyDays"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/circle_background"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/lblChat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="chats"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/lblSixtyChatCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lblChat"
+                                android:layout_centerHorizontal="true"
+                                android:text="0"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/clr_grey"></View>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr2"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_toLeftOf="@+id/lnrThirtyDays"
+                        android:background="@color/clr_brown"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblThirtyDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="30 days to go 0 schools"
+                            android:textColor="@color/bpWhite"
+                            android:textSize="20dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblThirtyDaysToview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/lnr2"
+                        android:layout_toLeftOf="@+id/lnrThirtyDays"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:text="View Details-->"
+                        android:textColor="@color/clr_blue"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lnrThirtyDays"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/circle_background"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/lblChat2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="chats"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/lblThirtyChatCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lblChat2"
+                                android:layout_centerHorizontal="true"
+                                android:text="0"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/clr_grey"></View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr3"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_toLeftOf="@+id/lnrTenDays"
+                        android:background="@color/clr_brown"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblTenDays"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+
+                            android:text="10 days to go 0 schools"
+                            android:textColor="@color/bpWhite"
+                            android:textSize="20dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblTenDaysToview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/lnr3"
+                        android:layout_toLeftOf="@+id/lnrTenDays"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:text="View Details-->"
+                        android:textColor="@color/clr_blue"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lnrTenDays"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/circle_background"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/lblChat3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="chats"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/lblTenChatCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lblChat3"
+                                android:layout_centerHorizontal="true"
+                                android:text="0"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/clr_grey"></View>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr4"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="80dp"
+                        android:layout_toLeftOf="@+id/lnrExpiredDays"
+                        android:background="@color/clr_brown"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblExpiredDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Expired 0 schools"
+                            android:textColor="@color/bpWhite"
+                            android:textSize="20dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lblExpiredDaysToview"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/lnr4"
+                        android:layout_toLeftOf="@+id/lnrExpiredDays"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:text="View Details-->"
+                        android:textColor="@color/clr_blue"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lnrExpiredDays"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/circle_background"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/lblChat4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="chats"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/lblExpiredChatCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lblChat4"
+                                android:layout_centerHorizontal="true"
+                                android:text="0"
+                                android:textColor="@color/bpWhite"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/clr_grey"></View>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

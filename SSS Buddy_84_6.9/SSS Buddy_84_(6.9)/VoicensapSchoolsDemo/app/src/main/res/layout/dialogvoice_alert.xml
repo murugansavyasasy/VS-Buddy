@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/clr_grey_light"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblAlertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:text="Alert"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/popup"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/clr_black">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/rytButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+
+        <Button
+            android:id="@+id/btnconfirm"
+            style="@style/btn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Record Voice"
+            android:textSize="15dp"
+            android:textColor="@color/bgwhite">
+
+        </Button>
+    </RelativeLayout>
+
+</LinearLayout>

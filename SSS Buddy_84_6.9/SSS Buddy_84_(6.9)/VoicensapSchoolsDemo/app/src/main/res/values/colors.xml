@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D5B4B4</color>
+    <!--#1d9b25</color>-->
+    <color name="colorPrimaryDark">#D5B4B4</color>
+    <color name="colorAccent">#000</color>
+
+    <color name="edit">#ffe4dddd</color>
+    <color name="colorReport">#dad7d7</color>
+    <color name="colorgrey">#576674</color>
+    <color name="grey">#dedee0</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorname">#FF062C66</color>
+    <color name="chat">#ebe6e1</color>
+
+    <color name="chatmessage">#c76f22</color>
+    <color name="colorTheme">#000</color>
+    <color name="colorText">#ffffff</color>
+    <color name="colorGrey">#140F0F</color>
+    <color name="colorAll">#e8bb5a</color>
+    <color name="colorall">#e8810c</color>
+
+    <color name="text1">#474646</color>
+
+    <color name="bgwhite">#FFF</color>
+    <color name="background">#FFF</color>
+    <color name="clr_grey">#B9B9B9</color>
+    <color name="clr_grey_light">#D8D8D8</color>
+    <!--#481d9b25</color>-->
+    <color name="background1">#000</color>
+    <!--#1d9b25</color>-->
+    <color name="backgroundsplash">#D5B4B4</color>
+    <color name="background2">#cecdcd</color>
+    <color name="bgheader">#45000000</color>
+    <color name="background3">#10000000</color>
+    <!--#321d9b25</color>-->
+    <color name="textbg">#000</color>
+    <!--#b31d9b25</color>-->
+    <color name="text">#50ffffff</color>
+
+    <color name="clr_green">#24BB59</color>
+    <color name="clr_red">#E34545</color>
+    <!--switch color-->
+    <color name="disable_red">#ff0000</color>
+    <color name="enable_green">#000</color>
+    <!--#b31d9b25</color>-->
+    <color name="clr_btn_add">#E67E22</color>
+
+    <color name="light_yellow">#f4b278</color>
+    <color name="clr_grey1">#cecdcd</color>
+    <color name="clr_blue">#43C6DB</color>
+    <color name="clr_blue1">#abdbe2</color>
+    <color name="clr_black">#000000</color>
+    <color name="clr_brown">#A4A4A4</color>
+
+    <color name="clr_green1">#a7f2c1</color>
+    <color name="clr_red1">#efb1b1</color>efb1b1
+
+    <color name="teacher_clr_black">#000000</color>
+    <color name="teacher_clr_card_grey">#F5F5F5</color>
+
+
+    <color name="membercolor">#b04d72</color>
+    <!--Vims color-->
+    <color name="clr_dark_grey">#707070</color>
+
+    <color name="Red">#e50471</color>
+    <color name="dull">#a0a6af</color>
+    <color name="colorlightas">#8b93a0</color>
+    <color name="darkgrey">#2a2b2d</color>
+    <color name="colordarkRed">#ce0c6a</color>
+    <color name="colorlightred">#c92424</color>
+    <color name="colorlight">#0c74e8</color>
+    <color name="colorApprove">#52a51a</color>
+    <color name="colorDetails">#143577</color>
+    <color name="colorVideo">#3e8072</color>
+    <color name="colorVideoBG">#f7d7d7</color>
+
+    <color name="coloraction_bar">#386889</color>
+    <color name="colorDelete">#7c1761</color>
+    <color name="colorEdit">#3f4096</color>
+    <color name="colorblack">#110f0f</color>
+    <color name="colorMaroon">#a40032</color>
+    <color name="customername">#6792d3</color>
+    <color name="color_dull">#67d3d0</color>
+    <color name="customertype">#3a914b</color>
+    <color name="colorgreen">#17564c</color>
+    <color name="colordarkgrey">#234247</color>
+    <color name="colorlightblue">#51bcac</color>
+    <color name="colordarkblue">#0c74e8</color>
+    <color name="colorlightash">#d2aba6</color>
+    <color name="colordarkpink">#F50057</color>
+    <color name="colorGreyLight">#DAD7D7</color>
+
+    <color name="colorpink">#FF4081</color>
+    <color name="colornavy">#5454B8</color>
+
+    <color name="colorlightpink">#e570b4</color>
+    <color name="colorsilver">#FFE4DDDD</color>
+    <color name="colorBackground">#2f668b</color>
+
+    <color name="pinkcolor">#861b89</color>
+    <color name="colorlightbackground">#e6ecf7</color>
+    <color name="colorbackground">#dbdcdd</color>
+    <color name="colorTitle">#FF5454B8</color>
+    <color name="colorblue">#0000FF</color>
+    <color name="gray_light">#808080</color>
+
+    <color name="colorfloat">#43B15B</color>
+    <color name="colorBox">#FFBEB4B4</color>
+
+    <color name="color_green">#1b8478</color>
+    <color name="colorViolet">#160944</color>
+    <color name="colorblue1">#218c6f</color>
+    <color name="colorgreenlight">#aab592</color>
+
+
+    <color name="colorViolet1">#a7f2c1</color>
+    <color name="colorblue11">#efb1b1</color>
+    <color name="colorgreenlight1">#abdbe2</color>
+    <color name="clr_bluelight">#D4F1ED</color>
+    <color name="clr_video">#c2e9ed</color>
+
+    <color name="backgroundsplash_dull">#E2D7D7</color>
+
+
+</resources><!--<color name="bgwhite">#FFF</color>-->
+    <!--<color name="background">#481d9b25</color>-->
+    <!--<color name="background1">#1d9b25</color>-->
+    <!--<color name="background2">#321d9b25</color>-->
+    <!--<color name="textbg">#b31d9b25</color>-->
+
+
+    <!--&lt;!&ndash;switch color&ndash;&gt;-->
+    <!--<color name="disable_red">#ff0000</color>-->
+    <!--<color name="enable_green">#b31d9b25</color>-->
+    <!--<color name="clr_btn_add">#E67E22</color>-->

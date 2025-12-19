@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bpWhite">
+
+    <RelativeLayout
+        android:id="@+id/rytParent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/lnrParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/imgArrow"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="School Name "
+                    android:textColor="@color/clr_black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/lblSchoolName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="G.h.ss.schooljhfgfg   "
+                    android:textColor="@color/bpDarker_blue"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PO Number "
+                    android:textColor="@color/clr_black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/lblPoNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="124235 "
+                    android:textColor="@color/numbers_text_color"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Unread Messages "
+                    android:textColor="@color/clr_black"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/lblUnreadCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="124235 "
+                    android:textColor="@color/numbers_text_color"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnChat"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="@drawable/teacher_btn_green"
+                android:text="Chat"
+                android:textColor="@color/bpWhite" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="25dp"
+            android:visibility="gone"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_arrow" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/lnrParent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+
+            android:background="@color/numbers_text_color"></View>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

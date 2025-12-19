@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_myschool_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    tools:context="pkg.vs.schoolsdemo.voicensapschoolsdemo.Activity.MyschoolList">
+
+    <LinearLayout
+        android:id="@+id/lnr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rb_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <RadioButton
+                android:id="@+id/img_all"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:checked="true"
+                android:text="All"
+                android:textColor="@color/colorAll"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_allcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/img_active"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:text="Live (Active)"
+                android:textColor="@color/clr_green1"
+                android:textSize="15dp"
+                android:textStyle="bold">
+
+            </RadioButton>
+
+            <TextView
+                android:id="@+id/txt_Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+
+            <RadioButton
+                android:id="@+id/imgInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="1dp"
+                android:text="Live (Inactive)"
+                android:textColor="@color/clr_red1"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_inactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnr1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rb_groupPoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/img_Poc"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:text="Poc (Active)"
+                android:textColor="@color/clr_green1"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPoc_allcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/imgPocInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:text="Poc (Inactive)"
+                android:textColor="@color/clr_red1"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtpoc_inactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+            <RadioButton
+                android:id="@+id/img_stopped"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:text="Stopped"
+                android:textColor="@color/clr_blue"
+                android:textSize="15dp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Stoped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/clr_black"
+                android:textSize="15dp">
+
+            </TextView>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="No Records Found"
+        android:textColor="@color/clr_grey"
+        android:textSize="25dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSchoolList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lnr2"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:scrollbars="vertical"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

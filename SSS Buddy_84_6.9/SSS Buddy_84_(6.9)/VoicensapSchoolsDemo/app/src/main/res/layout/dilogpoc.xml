@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@color/background2"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_dialog_info"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alert"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textColor="@color/background1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pocmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POC created Successfully....!!"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:layout_margin="5dp"
+        android:textColor="@color/background1" />
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/background2">-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If you want to record the WELCOME FILE press record button."
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/background1"
+        android:visibility="gone">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RECORD"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@color/background1"
+        android:gravity="center"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/imgrecord"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/microphone"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/okbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="OK"
+        android:textColor="@color/bgwhite"
+        android:background="@drawable/button" />
+<!--</LinearLayout>-->
+</LinearLayout>

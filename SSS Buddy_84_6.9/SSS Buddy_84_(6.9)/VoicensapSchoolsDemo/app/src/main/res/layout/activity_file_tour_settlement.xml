@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:padding="5dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Click Image to upload File"
+        android:textColor="@color/colorViolet"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/img_upload"
+        android:layout_width="50dp"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+
+        android:src="@drawable/upload"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:id="@+id/pdf_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@color/bpWhite">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pdf_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pdf_img1"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/pdf">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/pdf1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:id="@+id/rl_images"
+        android:visibility="gone"
+        android:layout_height="210dp">
+        <ImageView
+            android:id="@+id/card_upload"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:layout_height="100dp"
+            />
+        <ImageView
+            android:id="@+id/card_upload1"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+
+            android:layout_width="150dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_height="100dp"
+            />
+        <ImageView
+            android:id="@+id/card_upload2"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            />
+        <ImageView
+            android:id="@+id/card_upload3"
+            android:visibility="visible"
+            android:layout_width="150dp"
+            android:scaleType="fitXY"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="10dp"
+            android:layout_height="100dp"
+            />
+        <TextView
+            android:layout_width="150dp"
+            android:visibility="visible"
+            android:id="@+id/txtcount"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:scaleType="fitXY"
+            android:textSize="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_height="100dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="80dp"
+            android:src="@drawable/pdf"
+            android:visibility="gone"
+            android:layout_gravity="left"
+            android:id="@+id/img_pdf"
+            android:layout_height="80dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:id="@+id/display"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <!--</ScrollView>-->
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:text="Change Image/File"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:background="@color/colorTheme"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:background="@color/colorTheme"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

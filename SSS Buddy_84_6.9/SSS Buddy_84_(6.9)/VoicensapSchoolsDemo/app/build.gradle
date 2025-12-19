@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 35
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "pkg.vs.schoolsdemo.voicensapschoolsdemo"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode 86
+        versionName "6.9"
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    android {
+        ndkVersion = "26.1.10909125"
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
+
+
+    buildTypes {
+        release {
+            shrinkResources false
+            //It will remove unused resource files automatically from signed APK
+            minifyEnabled false
+            //It will remove unused code and libraries automatically from signed APK
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes {
+        release {
+            android {
+                lintOptions {
+                    checkReleaseBuilds false
+                    abortOnError false
+                }
+            }
+
+            debug {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'pkg.vs.schoolsdemo.voicensapschoolsdemo'
+}
+
+dependencies {
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'androidx.activity:activity:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.12.0'
+
+    implementation 'commons-validator:commons-validator:1.9.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'id.zelory:compressor:3.0.1'
+    implementation 'com.github.miteshpithadiya:SearchableSpinner:master'
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0'
+
+    implementation 'com.google.android.play:app-update:2.1.0'
+    implementation 'com.karumi:dexter:6.2.3'
+
+
+    implementation 'com.kbeanie:multipicker:1.1.31@aar'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
+    implementation 'com.github.TalbotGooday:AndroidPdfViewer:3.1.0-beta.3'
+    implementation 'com.github.fornewid:neumorphism:0.2.1'
+    //progress_bar
+    implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
+
+
+    // Amplitude will allow you to call setSampleFrom() with files, URLs, Uri and resources
+    // Important: Only works with api level 21 and higher
+    implementation 'com.github.lincollincol:amplituda:2.2.2'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+
+}
