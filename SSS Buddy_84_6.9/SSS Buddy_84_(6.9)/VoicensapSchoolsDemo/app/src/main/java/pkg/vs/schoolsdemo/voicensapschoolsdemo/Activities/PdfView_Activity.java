@@ -6,8 +6,10 @@ import androidx.core.view.WindowInsetsControllerCompat;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
-import com.github.barteksc.pdfviewer.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -21,63 +23,87 @@ import pkg.vs.schoolsdemo.voicensapschoolsdemo.R;
 
 public class PdfView_Activity extends AppCompatActivity {
 
-
-    PDFView pdfView;
-
-    // url of our PDF file.
-    String pdfurl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_view);
-        pdfView = findViewById(R.id.idPDFView);
 
-        WindowInsetsControllerCompat insetsController =
-                new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
-        insetsController.setAppearanceLightStatusBars(true);
+        webView = findViewById(R.id.webView);
 
-        Intent intent = getIntent();
-        String Pdfurl = intent.getExtras().getString("Pdffilepath");
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
 
+        String pdfUrl = getIntent().getStringExtra("Pdffilepath");
 
-        new RetrievePDFfromUrl().execute(Pdfurl);
-    }
+        String googleDocsUrl =
+                "https://docs.google.com/gview?embedded=true&url=" + pdfUrl;
 
-    // create an async task class for loading pdf file from URL.
-    class RetrievePDFfromUrl extends AsyncTask<String, Void, InputStream> {
-        @Override
-        protected InputStream doInBackground(String... strings) {
-            // we are using inputstream
-            // for getting out PDF.
-            InputStream inputStream = null;
-            try {
-                URL url = new URL(strings[0]);
-                // below is the step where we are
-                // creating our connection.
-                HttpURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
-                if (urlConnection.getResponseCode() == 200) {
-                    // response is success.
-                    // we are getting input stream from url
-                    // and storing it in our variable.
-                    inputStream = new BufferedInputStream(urlConnection.getInputStream());
-                }
-
-            } catch (IOException e) {
-                // this is the method
-                // to handle errors.
-                e.printStackTrace();
-                return null;
-            }
-            return inputStream;
-        }
-
-        @Override
-        protected void onPostExecute(InputStream inputStream) {
-            // after the execution of our async
-            // task we are loading our pdf in our pdf view.
-            pdfView.fromStream(inputStream).load();
-        }
+        webView.loadUrl(googleDocsUrl);
     }
 }
+
+
+//public class PdfView_Activity extends AppCompatActivity {
+//
+//
+//    PDFView pdfView;
+//
+//    // url of our PDF file.
+//    String pdfurl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+//
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_pdf_view);
+//        pdfView = findViewById(R.id.idPDFView);
+//
+//        WindowInsetsControllerCompat insetsController =
+//                new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+//        insetsController.setAppearanceLightStatusBars(true);
+//
+//        Intent intent = getIntent();
+//        String Pdfurl = intent.getExtras().getString("Pdffilepath");
+//
+//
+//        new RetrievePDFfromUrl().execute(Pdfurl);
+//    }
+//
+//    // create an async task class for loading pdf file from URL.
+//    class RetrievePDFfromUrl extends AsyncTask<String, Void, InputStream> {
+//        @Override
+//        protected InputStream doInBackground(String... strings) {
+//            // we are using inputstream
+//            // for getting out PDF.
+//            InputStream inputStream = null;
+//            try {
+//                URL url = new URL(strings[0]);
+//                // below is the step where we are
+//                // creating our connection.
+//                HttpURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
+//                if (urlConnection.getResponseCode() == 200) {
+//                    // response is success.
+//                    // we are getting input stream from url
+//                    // and storing it in our variable.
+//                    inputStream = new BufferedInputStream(urlConnection.getInputStream());
+//                }
+//
+//            } catch (IOException e) {
+//                // this is the method
+//                // to handle errors.
+//                e.printStackTrace();
+//                return null;
+//            }
+//            return inputStream;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(InputStream inputStream) {
+//            // after the execution of our async
+//            // task we are loading our pdf in our pdf view.
+//            pdfView.fromStream(inputStream).load();
+//        }
+//    }
+//}

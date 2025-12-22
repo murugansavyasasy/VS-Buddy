@@ -7,9 +7,14 @@
     android:fitsSystemWindows="true"
     tools:context=".Activities.PdfView_Activity">
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/idPDFView"
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
+
+    <!--    <com.github.barteksc.pdfviewer.PDFView-->
+<!--        android:id="@+id/idPDFView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.core.view.WindowInsetsControllerCompat;
 
-import com.github.barteksc.pdfviewer.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -46,7 +46,7 @@ import retrofit2.Response;
 
 public class PdfViewer extends AppCompatActivity {
 
-    PDFView pdfView;
+//    PDFView pdfView;
     static ProgressDialog mProgressDialog;
     public static String pdfFilePath;
     String FolderName = "//SchoolDocs";
@@ -55,7 +55,7 @@ public class PdfViewer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_viewer);
-        pdfView = findViewById(R.id.pdfView);
+//        pdfView = findViewById(R.id.pdfView);
 
 
         final File dir;
@@ -229,10 +229,10 @@ public class PdfViewer extends AppCompatActivity {
                                     mProgressDialog.dismiss();
                                     switch (Util_common.Doc_Type) {
                                         case "pdf":
-                                            pdfView.setVisibility(View.VISIBLE);
+                                            //pdfView.setVisibility(View.VISIBLE);
                                             Log.d("pdfFilePath", pdfFilePath);
-                                            pdfView.fromFile(new File(pdfFilePath))
-                                                    .load();
+                                        //    pdfView.fromFile(new File(pdfFilePath))
+                                               //     .load();
                                             break;
                                         case "pptx":
                                             openPowerPointFile(pdfFilePath);

@@ -43,7 +43,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Splashscreen extends AppCompatActivity {
-    Integer versionId = 52;
+    Integer versionId = 53;
     String Ver_UpdateAvailable = "";
     String Force_UpdateReq = "";
     String emp_id, emp_pass;

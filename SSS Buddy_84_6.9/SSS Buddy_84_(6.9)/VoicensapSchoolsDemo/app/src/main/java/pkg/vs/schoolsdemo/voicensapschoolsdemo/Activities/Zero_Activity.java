@@ -27,7 +27,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Adapter.Zero_Activity_Adapter;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.DataClass.Zero_activity_DataClass;
@@ -41,6 +40,9 @@ import retrofit2.Callback;
 public class Zero_Activity extends AppCompatActivity {
 
     RecyclerView rcy_schoollist;
+
+    private String selectedStatus = ""; // "", "LIVE", "POC"
+
     Zero_Activity_Adapter Zero_Activity_Adapter;
     EditText txtSearch;
     String userId;
@@ -89,79 +91,92 @@ public class Zero_Activity extends AppCompatActivity {
         rcy_schoollist.setItemAnimator(new DefaultItemAnimator());
         rcy_schoollist.setAdapter(Zero_Activity_Adapter);
 
-        if (txtSearch != null) {
-            txtSearch.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
+        txtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-                    if (Zero_Activity_Adapter == null) return;
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Zero_Activity_Adapter.filter(s.toString(), selectedStatus);
+                handleNoData();
+                updateCounts();
+            }
 
-                }
 
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    // TODO Auto-generated method stub
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-
-                    Search_filter(s.toString());
-                    //you can use runnable postDelayed like 500 ms to delay search text
-                }
-            });
-        }
-
-        rbGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                rbAll = (RadioButton) findViewById(R.id.img_all);
-                rbInactive = (RadioButton) findViewById(R.id.imgInactive);
-                rbActive = (RadioButton) findViewById(R.id.img_active);
-
-                switch (checkedId) {
-                    case R.id.img_all:
-                        if (rbAll.isChecked()) {
-                            filter("");
-
-                        }
-                        break;
-
-                    case R.id.imgInactive:
-                        if (rbInactive.isChecked()) {
-                            filter("LIVE");
-                        }
-                        break;
-
-                    case R.id.img_active:
-                        if (rbActive.isChecked()) {
-                            filter("POC");
-                        }
-                        break;
-
-                    default:
-
-                }
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
 
+
+        rbGroup.setOnCheckedChangeListener((group, checkedId) -> {
+
+            if (checkedId == R.id.img_all) {
+                selectedStatus = "";
+                txt_allcount.setVisibility(View.VISIBLE);
+                txt_livecount.setVisibility(View.GONE);
+                txt_poccount.setVisibility(View.GONE);
+
+            } else if (checkedId == R.id.imgInactive) {
+                selectedStatus = "LIVE";
+                txt_livecount.setVisibility(View.VISIBLE);
+                txt_allcount.setVisibility(View.GONE);
+                txt_poccount.setVisibility(View.GONE);
+
+            } else if (checkedId == R.id.img_active) {
+                selectedStatus = "POC";
+                txt_poccount.setVisibility(View.VISIBLE);
+                txt_allcount.setVisibility(View.GONE);
+                txt_livecount.setVisibility(View.GONE);
+            }
+
+            Zero_Activity_Adapter.filter(
+                    txtSearch.getText().toString(),
+                    selectedStatus
+            );
+            handleNoData();
+            updateCounts();
+
+        });
     }
 
-    private void Search_filter(String s) {
-        List<Zero_activity_DataClass> temp = new ArrayList();
-        for (Zero_activity_DataClass d : data) {
-            String value = d.getSchoolName().toLowerCase() + d.getSchoolId().toLowerCase() + d.getSalesname().toLowerCase() + d.getStatus().toLowerCase();
-            if (value.contains(s.toLowerCase())) {
-                temp.add(d);
-            } else {
-                txt_nodatafound.setVisibility(View.VISIBLE);
-            }
+    private void updateCounts() {
+
+        int count = Zero_Activity_Adapter.getFilteredCount();
+        String text = "(" + count + ")";
+
+        if (selectedStatus.equals("LIVE")) {
+            txt_livecount.setText(text);
+            txt_livecount.setVisibility(View.VISIBLE);
+            txt_allcount.setVisibility(View.GONE);
+            txt_poccount.setVisibility(View.GONE);
+
+        } else if (selectedStatus.equals("POC")) {
+            txt_poccount.setText(text);
+            txt_poccount.setVisibility(View.VISIBLE);
+            txt_allcount.setVisibility(View.GONE);
+            txt_livecount.setVisibility(View.GONE);
+
+        } else {
+            txt_allcount.setText(text);
+            txt_allcount.setVisibility(View.VISIBLE);
+            txt_livecount.setVisibility(View.GONE);
+            txt_poccount.setVisibility(View.GONE);
         }
-        Zero_Activity_Adapter.updateList(temp);
+    }
+
+
+    private void handleNoData() {
+        if (Zero_Activity_Adapter.getItemCount() == 0) {
+            txt_nodatafound.setVisibility(View.VISIBLE);
+        } else {
+            txt_nodatafound.setVisibility(View.GONE);
+        }
     }
 
     public void filter(String s) {
-        Zero_Activity_Adapter.notifyDataSetChanged();
+        Zero_Activity_Adapter.setData(datasList);
         data.clear();
         for (Zero_activity_DataClass d : datasList) {
             if (s.equals("")) {
@@ -257,7 +272,7 @@ public class Zero_Activity extends AppCompatActivity {
                             txt_allcount.setVisibility(View.VISIBLE);
 
                         }
-                        Zero_Activity_Adapter.notifyDataSetChanged();
+                        Zero_Activity_Adapter.setData(datasList);
                     } else {
                         Alert("No data Received. Try Again.");
                         txt_nodatafound.setVisibility(View.VISIBLE);
@@ -275,7 +290,7 @@ public class Zero_Activity extends AppCompatActivity {
             @Override
             public void onFailure(Call<JsonArray> call, Throwable t) {
                 Log.e("Response Failure", t.getMessage());
-                Alert("Server Connection Failed");
+                Alert("No data Received. Try Again.");
             }
         });
     }
@@ -304,8 +319,6 @@ public class Zero_Activity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
