@@ -97,9 +97,9 @@ public class CircularListAdapter extends RecyclerView.Adapter<CircularListAdapte
 //            tvcirularEODTiming=(TextView) view.findViewById(R.id.circularEODTiming);
 
             view.setOnClickListener(v -> {
-//                if (listener != null) {
-//                    listener.onItemClick(circulardatalist.get(getAdapterPosition()));
-//                }
+                if (listener != null) {
+                    listener.onItemClick(circulardatalist.get(getAdapterPosition()));
+                }
             });
         }
     }

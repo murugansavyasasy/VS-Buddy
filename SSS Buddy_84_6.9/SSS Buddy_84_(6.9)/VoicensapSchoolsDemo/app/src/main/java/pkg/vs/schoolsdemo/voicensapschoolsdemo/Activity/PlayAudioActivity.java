@@ -7,9 +7,11 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
+
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,11 +21,17 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Interface.InkaTranslateApi;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.R;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.rest.InkaClient;
@@ -287,23 +295,48 @@ public class PlayAudioActivity extends AppCompatActivity {
             }
         }
     }
-
     private void translateAudioUrl(String lang) {
+
         progressLoader.setVisibility(View.VISIBLE);
         btnTranslate.setEnabled(false);
         btnTranslate.setText("Translating...");
 
         RequestBody audioUrlBody = RequestBody.create(MultipartBody.FORM, originalVoiceUrl);
         RequestBody langBody = RequestBody.create(MultipartBody.FORM, lang);
+
+        // ===== ADDED LOG (REQUEST BODY AS JSON) =====
+        try {
+            JSONObject logJson = new JSONObject();
+            logJson.put("audio_url", originalVoiceUrl);
+            logJson.put("language", lang);
+
+            Log.e("API_LOG", "================ REQUEST ================");
+            Log.e("API_LOG", "BODY : " + logJson.toString());
+            Log.e("API_LOG", "=========================================");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        // ==========================================
+
         Log.e("DEBUG_API", "TRANSLATE REQUEST → Target language: " + lang);
         Log.e("DEBUG_API", "Original URL: " + voiceUrl);
 
         Call<ResponseBody> call = inkaApi.translateAudioUrl(API_KEY, audioUrlBody, langBody);
 
         call.enqueue(new Callback<ResponseBody>() {
+
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
                 progressLoader.setVisibility(View.GONE);
+
+                // ===== ADDED LOG (RESPONSE INFO) =====
+                Log.e("API_LOG", "================ RESPONSE ================");
+                Log.e("API_LOG", "CODE    : " + response.code());
+                Log.e("API_LOG", "SUCCESS : " + response.isSuccessful());
+                // ====================================
+
+                Log.d("response", String.valueOf(response));
 
                 if (response.isSuccessful() && response.body() != null) {
                     try {
@@ -316,7 +349,7 @@ public class PlayAudioActivity extends AppCompatActivity {
                         Log.e("TRANSLATED", "New translation saved: " + voiceUrl);
 
                         resetAudio();
-                        prepareAudio();//Audio Prepare
+                        prepareAudio();
 
                         mediaPlayer.setOnPreparedListener(mp -> {
                             seekBar.setMax(mp.getDuration());
@@ -325,44 +358,142 @@ public class PlayAudioActivity extends AppCompatActivity {
                             seekBar.setProgress(0);
                             setAudioControlsEnabled(true);
                             imgVoicePlay.setImageResource(R.drawable.play_icon_voice);
-                            Toast.makeText(PlayAudioActivity.this, "Translation ready! Tap play", Toast.LENGTH_LONG).show();
+                            Toast.makeText(
+                                    PlayAudioActivity.this,
+                                    "Translation ready! Tap play",
+                                    Toast.LENGTH_LONG
+                            ).show();
                         });
-                        btnTranslate.setEnabled(true);
-                        btnTranslate.setText("Translate");
 
                     } catch (Exception e) {
                         Log.e("AUDIO_ERROR", "Failed to save audio", e);
-                        Toast.makeText(PlayAudioActivity.this, "Failed to process audio", Toast.LENGTH_SHORT).show();
-                        btnTranslate.setEnabled(true);
-                        btnTranslate.setText("Translate");
                     }
+                    btnTranslate.setEnabled(true);
+                    btnTranslate.setText("Translate");
+
                 } else {
                     String error = "Unknown error";
                     if (response.errorBody() != null) {
                         try {
                             error = response.errorBody().string();
-                        } catch (Exception ignored) {
-                        }
+                        } catch (Exception ignored) {}
                     }
+
+                    Log.e("API_LOG", "ERROR BODY : " + error);
+
                     Log.e("DEBUG_API", "Translation failed: " + response.code() + " → " + error);
-                    Toast.makeText(PlayAudioActivity.this, "Translation failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(
+                            PlayAudioActivity.this,
+                            "Translation failed",
+                            Toast.LENGTH_LONG
+                    ).show();
 
                     btnTranslate.setEnabled(true);
                     btnTranslate.setText("Translate");
                 }
+
+                Log.e("API_LOG", "=========================================");
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
+
                 progressLoader.setVisibility(View.GONE);
+
+                Log.e("API_LOG", "================ FAILURE ================");
+                Log.e("API_LOG", "ERROR : " + t.getMessage());
+                Log.e("API_LOG", "=========================================");
+
                 Log.e("DEBUG_API", "Network failed: " + t.getMessage());
-                Toast.makeText(PlayAudioActivity.this, "No internet connection", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        PlayAudioActivity.this,
+                        "No internet connection",
+                        Toast.LENGTH_SHORT
+                ).show();
 
                 btnTranslate.setEnabled(true);
                 btnTranslate.setText("Translate");
             }
         });
     }
+
+
+
+//    private void translateAudioUrl(String lang) {
+//        progressLoader.setVisibility(View.VISIBLE);
+//        btnTranslate.setEnabled(false);
+//        btnTranslate.setText("Translating...");
+//
+//        RequestBody audioUrlBody = RequestBody.create(MultipartBody.FORM, originalVoiceUrl);
+//        RequestBody langBody = RequestBody.create(MultipartBody.FORM, lang);
+//        Log.e("DEBUG_API", "TRANSLATE REQUEST → Target language: " + lang);
+//        Log.e("DEBUG_API", "Original URL: " + voiceUrl);
+//
+//        Call<ResponseBody> call = inkaApi.translateAudioUrl(API_KEY, audioUrlBody, langBody);
+//
+//        call.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                progressLoader.setVisibility(View.GONE);
+//                Log.d("response", String.valueOf(response));
+//                if (response.isSuccessful() && response.body() != null) {
+//                    try {
+//                        byte[] audioBytes = response.body().bytes();
+//
+//                        File translatedFile = saveAudioToCache(audioBytes);
+//                        translatedAudioUrl = translatedFile.getAbsolutePath();
+//                        voiceUrl = translatedAudioUrl;
+//
+//                        Log.e("TRANSLATED", "New translation saved: " + voiceUrl);
+//
+//                        resetAudio();
+//                        prepareAudio();//Audio Prepare
+//
+//                        mediaPlayer.setOnPreparedListener(mp -> {
+//                            seekBar.setMax(mp.getDuration());
+//                            lblTotalDuration.setText(formatTime(mp.getDuration()));
+//                            lblCurrentTime.setText("00:00");
+//                            seekBar.setProgress(0);
+//                            setAudioControlsEnabled(true);
+//                            imgVoicePlay.setImageResource(R.drawable.play_icon_voice);
+//                            Toast.makeText(PlayAudioActivity.this, "Translation ready! Tap play", Toast.LENGTH_LONG).show();
+//                        });
+//                        btnTranslate.setEnabled(true);
+//                        btnTranslate.setText("Translate");
+//
+//                    } catch (Exception e) {
+//                        Log.e("AUDIO_ERROR", "Failed to save audio", e);
+//                        Toast.makeText(PlayAudioActivity.this, "Failed to process audio", Toast.LENGTH_SHORT).show();
+//                        btnTranslate.setEnabled(true);
+//                        btnTranslate.setText("Translate");
+//                    }
+//                } else {
+//                    String error = "Unknown error";
+//                    if (response.errorBody() != null) {
+//                        try {
+//                            error = response.errorBody().string();
+//                        } catch (Exception ignored) {
+//                        }
+//                    }
+//                    Log.e("DEBUG_API", "Translation failed: " + response.code() + " → " + error);
+//                    Toast.makeText(PlayAudioActivity.this, "Translation failed", Toast.LENGTH_LONG).show();
+//
+//                    btnTranslate.setEnabled(true);
+//                    btnTranslate.setText("Translate");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                progressLoader.setVisibility(View.GONE);
+//                Log.e("DEBUG_API", "Network failed: " + t.getMessage());
+//                Toast.makeText(PlayAudioActivity.this, "No internet connection", Toast.LENGTH_SHORT).show();
+//
+//                btnTranslate.setEnabled(true);
+//                btnTranslate.setText("Translate");
+//            }
+//        });
+//    }
 
     private File saveAudioToCache(byte[] audioBytes) throws IOException {
         File cacheDir = new File(getCacheDir(), "translated_audio");
