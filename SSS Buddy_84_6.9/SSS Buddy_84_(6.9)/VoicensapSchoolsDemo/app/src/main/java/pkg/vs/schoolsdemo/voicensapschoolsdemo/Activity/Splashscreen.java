@@ -38,12 +38,13 @@ import pkg.vs.schoolsdemo.voicensapschoolsdemo.Models.SharedPreference_class;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.R;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.rest.VimsClient;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.rest.VoicesnapdemoapiClient;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.util.Util_common;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Splashscreen extends AppCompatActivity {
-    Integer versionId = 54;
+    Integer versionId = 55;
     String Ver_UpdateAvailable = "";
     String Force_UpdateReq = "";
     String emp_id, emp_pass;
@@ -125,6 +126,10 @@ public class Splashscreen extends AppCompatActivity {
                     Force_UpdateReq = object.getString("IsForceUpdateRequired");
                     schoolurl = object.getString("SchoolURL");
                     vimsurl = object.getString("VimsURL");
+
+                    Util_common.isSchoolUrl=schoolurl;
+                    Util_common.isVimesUrl=vimsurl;
+
                     VimsClient.changeApiBaseUrl(vimsurl);
                     VoicesnapdemoapiClient.changeApiBaseUrl(schoolurl);
 

@@ -7,6 +7,7 @@ import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.AWS.PreSignedUrl;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Models.AlertClass;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Models.ReportingMember;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Models.TripDetails;
@@ -61,9 +62,8 @@ public interface Voicesnapdemointerface {
     @POST("ManagePOC")
     Call<JsonArray> CreatePOC(@Body JsonObject jsonObject);//, @Part MultipartBody.Part file);
 
-    @Multipart
     @POST("UploadWelcomeFile")
-    Call<JsonArray> UploadWelcomefile(@Part("Info") RequestBody requestBody, @Part MultipartBody.Part file);
+    Call<JsonArray> UploadWelcomefile(@Body JsonObject jsonObject);
 
     @POST("AddCallorSMSCredits")
     Call<JsonArray> Credits(@Body JsonObject jsonObject);
@@ -143,9 +143,8 @@ public interface Voicesnapdemointerface {
     @POST("alert_messages")
     Call<AlertClass>alert_messages();
 
-    @Multipart
     @POST("InitiateDemoCallByDemoID")
-    Call<JsonArray> InitiateDemoCallByDemoID(@Part("Info") RequestBody requestBody, @Part MultipartBody.Part file);
+    Call<JsonArray> InitiateDemoCallByDemoID(@Body JsonObject jsonObject);
 
     @Headers("Content-Type: application/json")
     @POST("api/AppDetails/ManageTripDetails")
@@ -158,5 +157,11 @@ public interface Voicesnapdemointerface {
     @GET("api/AppDetails/GetOverallTripDetails")
     Call<List<TripDetails>> getOverallTripDetails(@Query("UserId") String userId
     );
+
+    @GET("get-s3-presigned-url")
+    Call<PreSignedUrl> getPreSignedUrl(@Query("bucket") String bucket,
+                                       @Query("fileName") String fileName,
+                                       @Query("bucketPath") String bucketPath,
+                                       @Query("fileType") String fileType);
 
 }

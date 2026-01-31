@@ -21,4 +21,6 @@ public class Util_common {
     public static  String Doc_ID ="";
     public static  String Doc_Title ="";
     public static  String Doc_Type ="";
+    public static  String isSchoolUrl ="";
+    public static  String isVimesUrl ="";
 }

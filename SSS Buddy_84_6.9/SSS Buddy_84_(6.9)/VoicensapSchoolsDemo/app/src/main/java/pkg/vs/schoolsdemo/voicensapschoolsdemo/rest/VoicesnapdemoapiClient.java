@@ -54,6 +54,7 @@ public class VoicesnapdemoapiClient {
     public static void changeApiBaseUrl(String newApiBaseUrl) {
         Log.d("Base URL", BASE_URL);
         BASE_URL = newApiBaseUrl;
+        retrofit = null;
         Log.d("Base URLnew", BASE_URL);
         builder = new Retrofit.Builder()
                 .client(getOK_Client())

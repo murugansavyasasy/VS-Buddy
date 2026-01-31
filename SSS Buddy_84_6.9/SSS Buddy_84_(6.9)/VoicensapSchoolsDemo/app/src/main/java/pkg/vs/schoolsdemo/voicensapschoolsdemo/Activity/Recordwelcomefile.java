@@ -38,15 +38,22 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.AWS.AwsUploadingPreSigned;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.AWS.UploadCallback;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Activities.HomeScreen;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Interface.Voicesnapdemointerface;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.Models.SharedPreference_class;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.R;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.rest.VimsClient;
 import pkg.vs.schoolsdemo.voicensapschoolsdemo.rest.VoicesnapdemoapiClient;
+import pkg.vs.schoolsdemo.voicensapschoolsdemo.util.Util_common;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -56,11 +63,12 @@ public class Recordwelcomefile extends AppCompatActivity {
     //    Media Player
 //    Button btnNext;
     RelativeLayout rlVoicePreview, rytButtons;
+    private ProgressDialog mProgressDialog;
     ImageView ivRecord;
+    AwsUploadingPreSigned isAwsUploadingPreSigned;
     ImageButton imgBtnPlayPause;
     SeekBar seekBar;
     String fileduration;
-
     TextView tvPlayDuration, tvRecordDuration, tvRecordTitle;
     LinearLayout linearLayoutParent;
     private MediaPlayer mediaPlayer;
@@ -76,9 +84,10 @@ public class Recordwelcomefile extends AppCompatActivity {
     SharedPreferences.Editor ed;
     private static final String SH_USERS = "userInfo";
     private static final String SH_USERID = "UserId";
+    Boolean isSendButton = true;
     File fileRecordedFilePath;
-    public static final String VOICE_FOLDER_NAME = "Demo App/Voice";
-    public static final String VOICE_FILE_NAME = "demoVoice.mp3";
+    public static final String VOICE_FOLDER_NAME = "Demo_App/Voice";
+    public static final String VOICE_FILE_NAME = "demoVoice.m4a";
     int iRequestCode = 0;
 
     @Override
@@ -90,6 +99,7 @@ public class Recordwelcomefile extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
         }
+        isAwsUploadingPreSigned = new AwsUploadingPreSigned();
         shpRemember = getSharedPreferences(SH_USERS, MODE_PRIVATE);
         iRequestCode = getIntent().getExtras().getInt("Requestcode", 0);
         Log.d("iRequestCode", String.valueOf(iRequestCode));
@@ -128,11 +138,11 @@ public class Recordwelcomefile extends AppCompatActivity {
         btn_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                isSendButton = false;
+                AwsUploadingFile(fileRecordedFilePath.getPath());
 //                if (!isNetworkConnected()) {
 
-                welcomefileuploadretrofit();
+                // welcomefileuploadretrofit();
 
 //                } else {
 //                    showToast("Check Your Internet Connection");
@@ -149,7 +159,7 @@ public class Recordwelcomefile extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                isSendButton = true;
                 alert("Are you sure, Do you want to send", "1");
             }
         });
@@ -175,6 +185,34 @@ public class Recordwelcomefile extends AppCompatActivity {
         btn_record.setEnabled(false);
         setupAudioPlayer();
         fetchSong();
+    }
+
+    private void AwsUploadingFile(String isFilePath) {
+        Log.d("isFilePath", isFilePath);
+
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setMessage("Loading...");
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.show();
+
+        isAwsUploadingPreSigned.getPreSignedUrl(isFilePath, this, new UploadCallback() {
+            @Override
+            public void onUploadSuccess(String response, String isAwsFile) {
+
+                if (isSendButton) {
+                    InitiateCallForDemoid(isAwsFile);
+                } else {
+                    welcomefileuploadretrofit(isAwsFile);
+                }
+
+            }
+
+            @Override
+            public void onUploadError(String error) {
+                Log.e("Upload Error", error);
+            }
+        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -214,10 +252,9 @@ public class Recordwelcomefile extends AppCompatActivity {
             recorder = new MediaRecorder();
             recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-            recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-            // recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-
-            recorder.setAudioEncodingBitRate(16);
+//            recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+            recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+            recorder.setAudioEncodingBitRate(128000);
             recorder.setAudioSamplingRate(44100);
             recorder.setOutputFile(getRecFilename());
             recorder.prepare();
@@ -423,33 +460,29 @@ public class Recordwelcomefile extends AppCompatActivity {
         return finalTimerString;
     }
 
-    private void welcomefileuploadretrofit() {
-        final ProgressDialog mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setIndeterminate(true);
-        mProgressDialog.setMessage("Loading...");
-        mProgressDialog.setCancelable(false);
-        mProgressDialog.show();
+    private void welcomefileuploadretrofit(String isAwsFile) {
+
+        VimsClient.changeApiBaseUrl(Util_common.isVimesUrl);
+        VoicesnapdemoapiClient.changeApiBaseUrl(Util_common.isSchoolUrl);
+
+        File originalFile = new File(String.valueOf(fileRecordedFilePath));
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault())
+                .format(new Date());
+        String fileName = originalFile.getName();
+        String name = fileName.substring(0, fileName.lastIndexOf("."));
+        String extension = fileName.substring(fileName.lastIndexOf("."));
+        String newFileName = name + "_" + timeStamp + extension;
+        File newFile = new File(originalFile.getParent(), newFileName);
 
         Voicesnapdemointerface apiService = VoicesnapdemoapiClient.getClient().create(Voicesnapdemointerface.class);
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("LoginId", userId);
         jsonObject.addProperty("schoolId", schoolid);
+        jsonObject.addProperty("voiceurl", isAwsFile);
+        jsonObject.addProperty("filename", newFile.getName());
         Log.d("welcomefileupload:req", jsonObject.toString());
 
-        File file = new File(fileRecordedFilePath.getPath());
-        Log.d("FILE_Path", fileRecordedFilePath.getPath());
-//        File file = FileUtils.getFile(this, Uri.parse(recFilePath));
-
-        // create RequestBody instance from file
-        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
-
-        MultipartBody.Part bodyFile = MultipartBody.Part.createFormData("voice", file.getName(), requestFile);
-
-        RequestBody requestBody = RequestBody.create(MultipartBody.FORM, jsonObject.toString());
-
-        Call<JsonArray> call = apiService.UploadWelcomefile(requestBody, bodyFile);
-
-
+        Call<JsonArray> call = apiService.UploadWelcomefile(jsonObject);
         call.enqueue(new Callback<JsonArray>() {
             @Override
             public void onResponse(Call<JsonArray> call, retrofit2.Response<JsonArray> response) {
@@ -494,16 +527,14 @@ public class Recordwelcomefile extends AppCompatActivity {
         });
     }
 
-    private void InitiateCallForDemoid() {
+    private void InitiateCallForDemoid(String isAwsFile) {
         String demoid = getIntent().getStringExtra("demoid");
         String LoginSchlid = SharedPreference_class.getShSchlLoginid(Recordwelcomefile.this);
-        final ProgressDialog mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setIndeterminate(true);
-        mProgressDialog.setMessage("Loading...");
-        mProgressDialog.setCancelable(false);
-        mProgressDialog.show();
 
         fileduration = tvRecordDuration.getText().toString();
+
+        VimsClient.changeApiBaseUrl(Util_common.isVimesUrl);
+        VoicesnapdemoapiClient.changeApiBaseUrl(Util_common.isSchoolUrl);
 
         String time = fileduration; //mm:ss
         String[] units = time.split(":"); //will break the string up into an array
@@ -511,30 +542,27 @@ public class Recordwelcomefile extends AppCompatActivity {
         int seconds = Integer.parseInt(units[1]); //second element
         int duration = 60 * minutes + seconds; //add up our values
 
+        File originalFile = new File(String.valueOf(fileRecordedFilePath));
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault())
+                .format(new Date());
+        String fileName = originalFile.getName();
+        String name = fileName.substring(0, fileName.lastIndexOf("."));
+        String extension = fileName.substring(fileName.lastIndexOf("."));
+        String newFileName = name + "_" + timeStamp + extension;
+        File newFile = new File(originalFile.getParent(), newFileName);
+
         Voicesnapdemointerface apiService = VoicesnapdemoapiClient.getClient().create(Voicesnapdemointerface.class);
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("Demoid", demoid);
         jsonObject.addProperty("LoginID", LoginSchlid);
         jsonObject.addProperty("Duration", String.valueOf(duration));
-
+        jsonObject.addProperty("voiceurl", isAwsFile);
+        jsonObject.addProperty("filename", String.valueOf(newFile.getName()));
 
         Log.d("welcomefileupload:req", jsonObject.toString());
 
-
-        File file = new File(fileRecordedFilePath.getPath());
-        Log.d("FILE_Path", fileRecordedFilePath.getPath());
-//        File file = FileUtils.getFile(this, Uri.parse(recFilePath));
-
-        // create RequestBody instance from file
-        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
-        Log.d("requestbody",requestFile.toString());
-
-        MultipartBody.Part bodyFile = MultipartBody.Part.createFormData("voice", file.getName(), requestFile);
-
-        RequestBody requestBody = RequestBody.create(MultipartBody.FORM, jsonObject.toString());
-
-        Call<JsonArray> call = apiService.InitiateDemoCallByDemoID(requestBody, bodyFile);
-        Log.d("callvalue",call.toString());
+        Call<JsonArray> call = apiService.InitiateDemoCallByDemoID(jsonObject);
+        Log.d("callvalue", call.toString());
 
 
         call.enqueue(new Callback<JsonArray>() {
@@ -583,43 +611,44 @@ public class Recordwelcomefile extends AppCompatActivity {
 
 
     private void alert(String reason, String type) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Recordwelcomefile.this);
-        builder.setTitle(reason);
-//        builder.setMessage(reason);
-        builder.setCancelable(true);
-        if (type.equals("1")) {
-            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    InitiateCallForDemoid();
-
-                }
-            });
-            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-
-
-                }
-            });
-            // builder.show();
-        } else {
+        runOnUiThread(() -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(Recordwelcomefile.this);
             builder.setTitle(reason);
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
+//        builder.setMessage(reason);
+            builder.setCancelable(true);
+            if (type.equals("1")) {
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                    InitiateCallForDemoid(isAwsFile);
+                        AwsUploadingFile(fileRecordedFilePath.getPath());
 
-                    Intent i = new Intent(Recordwelcomefile.this, HomeScreen.class);
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);
-                    finish();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+                // builder.show();
+            } else {
+                builder.setTitle(reason);
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Intent i = new Intent(Recordwelcomefile.this, HomeScreen.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                        finish();
 
 
-                }
-            });
-        }
-        builder.create().show();
+                    }
+                });
+            }
+            builder.create().show();
 
-
+        });
     }
 
     private void Alert(String msg) {
